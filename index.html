@@ -1,537 +1,622 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Mayank Raj — Senior Product Designer specializing in Enterprise SaaS, AI Products, Design Systems, and Design Engineering. 4+ years turning complex workflows into clear, scalable interfaces." />
+  <title>Mayank Raj — Senior Product Designer · Enterprise UX &amp; Systems</title>
 
-    <meta name="description" content="">
-    <meta name="author" content="TemplateMo">
-
-    <title>Mayank Raj</title>
-
-    <!-- CSS FILES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="css/bootstrap-icons.css" rel="stylesheet">
-
-    <link href="css/magnific-popup.css" rel="stylesheet">
-
-    <link href="css/templatemo-first-portfolio-style.css" rel="stylesheet">
-
-
+  <!-- CSS Dependencies -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-    <section class="preloader">
-        <div class="spinner">
-            <span class="spinner-rotate"></span>
+  <!-- Floating Toast Notification -->
+  <div id="toast" role="status" aria-live="polite">
+    <i class="bi bi-check2-circle" style="color:var(--accent-emerald);"></i>
+    <span class="toast-text">Copied to clipboard</span>
+  </div>
+
+  <!-- ─────────── 01. TOP NAVIGATION ─────────── -->
+  <header id="mainNav" style="position:relative;">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between gap-2">
+        <a href="#hero" class="d-flex align-items-center text-decoration-none gap-2 flex-shrink-0">
+          <span class="nav-name">Mayank Raj</span>
+        </a>
+
+        <nav class="d-none d-lg-flex align-items-center gap-1">
+          <a href="#work" class="nav-link-ed" data-nav-target="work">Work</a>
+          <a href="#systems" class="nav-link-ed" data-nav-target="systems">Systems</a>
+          <a href="#about" class="nav-link-ed" data-nav-target="about">About</a>
+          <a href="#contact" class="nav-link-ed" data-nav-target="contact">Contact</a>
+        </nav>
+
+        <div class="d-flex align-items-center gap-2">
+          <button class="btn-editorial-secondary d-none d-md-inline-flex" data-copy-phone>
+            <i class="bi bi-clipboard"></i>
+            <span class="nav-btn-text">Copy Phone : +91 9015119802</span>
+          </button>
+          <a class="btn-editorial-secondary d-none d-sm-inline-flex" target="_blank" href="img/mayank_raj_resume.pdf">
+            <i class="bi bi-file-earmark-person"></i>
+            <span class="nav-btn-text">View Resume</span>
+          </a>
+          <!-- Mobile hamburger toggle -->
+          <button class="nav-toggle d-flex d-lg-none" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
         </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="nav-mobile-menu" id="navMobileMenu">
+      <div class="nav-mobile-links">
+        <a href="#work" class="nav-mobile-link">Work</a>
+        <a href="#systems" class="nav-mobile-link">Systems</a>
+        <a href="#about" class="nav-mobile-link">About</a>
+        <a href="#contact" class="nav-mobile-link">Contact</a>
+      </div>
+      <div class="nav-mobile-actions">
+        <button class="btn-editorial-secondary" data-copy-phone>
+          <i class="bi bi-clipboard"></i> Copy Phone : +91 9015119802
+        </button>
+        <a class="btn-editorial-secondary" target="_blank" href="img/mayank_raj_resume.pdf">
+          <i class="bi bi-file-earmark-person"></i> View Resume
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ─────────── 02. HERO SECTION ─────────── -->
+    <section id="hero">
+      <div class="container">
+
+        <h1 class="hero-title-ed">
+          Designing clarity into complex enterprise platforms &amp; AI workflows.
+        </h1>
+
+        <p class="hero-bio-ed">
+          UI/UX &amp; Product Designer with 4+ years of experience creating intuitive digital experiences for AI-powered
+          products, enterprise SaaS, and complex platforms. I combine user-centered design, scalable design systems, and
+          UI Development to turn complex problems into simple, accessible experiences.
+        </p>
+
+        <!-- Expertise Marquee Line -->
+        <div class="hero-marquee-strip2">
+          <h5 class="mb-0">EXPERTISE:</h5>
+          <section class="hero-marquee-strip">
+            <p class="mb-0 experties">UX Research</p>
+            <span>✦</span>
+            <p class="mb-0 experties">Product Design</p>
+            <span>✦</span>
+            <p class="mb-0 experties">UI/UX Design</p>
+            <span>✦</span>
+            <p class="mb-0 experties">Enterprise SaaS Applications</p>
+            <span>✦</span>
+            <p class="mb-0 experties"> Design Systems</p>
+            <span>✦</span>
+            <p class="mb-0 experties">Interaction Design</p>
+            <span>✦</span>
+            <p class="mb-0 experties">Information Architecture</p>
+            <span>✦</span>
+            <p class="mb-0 experties">WCAG Accessibility</p>
+            <span>✦</span>
+            <p class="mb-0 experties">HTML5 / CSS3 / Bootstrap5 / Angular UI / React UI</p>
+          </section>
+        </div>
+        <div class="d-flex flex-wrap align-items-center gap-3 mt-5">
+          <a href="#work" class="btn-editorial-primary">
+            View Selected Work <i class="bi bi-arrow-down"></i>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <nav class="navbar navbar-expand-lg">
-        <div class="container headd header-bg justify-content-between ">
-            <section class="d-flex d-lg-flex align-items-center justify-content-lg-start justify-content-between w-100">
-                <h5 href="index.html" class="navbar-brand mx-auto mx-lg-0 mb-0">Mayank Raj </h5>
-                <h5 href="index.html"
-                    class="navbar-brand mx-auto mx-lg-0 fw-lightt fs-25 ms-0 ms-lg-4 d-none d-lg-block mb-0">UI UX
-                    Designer
-                    and UI Developer</h5>
-                <div class="d-flex align-items-center  ms-auto d-block d-lg-none">
-                    <i class="navbar-icon bi-telephone-plus me-1  me-lg-3"></i>
-                    <h5 class="text-white mb-0">9015119802</h5>
-                </div>
-            </section>
 
 
-
-
-            <div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
-                <div class="d-lg-flex align-items-center  ms-auto">
-                    <i class="navbar-icon bi-telephone-plus me-3"></i>
-                    <h5 class="text-white mb-0">9015119802</h5>
-                </div>
-            </div>
-
+    <!-- ─────────── 04. SELECTED WORK SHOWCASE ─────────── -->
+    <section id="work">
+      <div class="container">
+        <div class="mb-2">
+          <div class="eyebrow-label">Selected Work</div>
+          <h2 class="headline-editorial">Featured Case Studies</h2>
+          <p class="headline-sub">
+            Three deep-dive projects demonstrating craftsmanship across scalable design systems, generative AI product
+            architecture, and enterprise UX debt audits.
+          </p>
         </div>
-    </nav>
 
-    <main>
-
-
-
-
-
-
-        <section class="projects section-padding p-2 p-lg-5" id="section_4">
-            <div class="container main-containerr">
-                <div class="row mt-5">
-                    <div class="clearfix"></div>
-                    <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">Design System</small> <br>
-                                <span class="fw-light fs-14">(UI UX Design)</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2 me-4"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://www.figma.com/proto/0At4FR2KWWOMtXBfB3fOOj/holistic-group?node-id=105-58802&viewport=3773%2C-464%2C0.06&t=AOAiSLPhPTQLKbR3-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1">
-                                            Figma File</a> </span></p>
-                                        
-                              <p><a class="link-btn me-3 mb-2 me-4" target="_blank" href="images/Design system.pdf">
-                                    Case Study
-                                </a></p>
-                                
-                            </section>
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2 ">
-                            <img src="images/projects/Design-system.jpg" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">AI Factory</small> <br>
-                                <span class="fw-light fs-14">(UI UX Design)</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2 me-4"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://www.figma.com/proto/Y5ZL1iqNdvE3gtudbFazqo/AI-Command-Center?node-id=31-13650&viewport=721%2C-2513%2C0.4&t=WiKpLVjhN22cwYap-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=15%3A1681&show-proto-sidebar=1&page-id=0%3A1">See
-                                            Figma Prototype</a> </span></p>
-                                        
-                              <p><a class="link-btn me-3 mb-2 me-4" target="_blank" href="images/AI Command center design syste.pdf">
-                                    Design Document
-                                </a></p>
-                                
-                            </section>
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2 ">
-                            <img src="images/projects/aicommandcenter.jpg" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">Proptifi user Panel</small> <br>
-                                <span class="fw-light fs-14">(UI UX Design)</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2 me-4"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://www.figma.com/proto/P72m6FJltbVIC3KwveoRrz/Untitled?node-id=1-5844&viewport=-51%2C-1090%2C0.16&t=4HmSNWsowRmofqXS-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1">See
-                                            Figma Prototype</a> </span></p>
-
-                                            <p><a class="link-btn me-3 mb-2 me-4" target="_blank" href="images/proptifi case study - Update.pdf">
-                                    Case Study
-                                </a></p>
-                            </section>
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2 ">
-                            <img src="images/projects/user-panal.png" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-                        </div>
-                    </div>
-                    
-                    <hr class="m-3 mb-0">
-                    <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">Proptifi website</small> <br>
-                                <span class="fw-light fs-14">(UI UX Design)</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://www.figma.com/proto/mEoY0XppgQCvyWraLPKcWj/proptify-prototype?page-id=0%3A1&node-id=30-7750&viewport=4996%2C424%2C0.14&t=XSE0yoiF1NiC9Ou9-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=30%3A7750&show-proto-sidebar=1">
-                                            See Figma Prototype</a> </span></p>
-                                
-                            </section>
-                        </div>
-                        <div class="projects-thumb p-3 mb-2 mt-0">
-                            <img src="images/projects/proptifibanner.png" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-
-                        </div>
-                    </div>
-                   
-                    
-                    <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">Bhavini</small> <br>
-                                <span class="fw-light fs-14">(UI UX Design and Development)</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://www.figma.com/proto/nsyUV6wRQ3XkKcNMQMaD4z/bhavini-ui?page-id=0%3A1&node-id=4-5873&viewport=-2164%2C7845%2C0.24&t=uLp84Qq9MG9FFcln-1&scaling=min-zoom&content-scaling=fixed">See
-                                            Figma Prototype</a> </span></p>
-                                <p class="mb-2 me-lg-4 me-0"> <span class="checkit"><a class="link-btn" target="_blank"
-                                            href="https://bhavini.nic.in/en">See Live website</a> </span>
-                                </p>
-                            </section>
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2">
-                            <img src="images/projects/bhavinibanner.png" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">Tender Management </small> <br>
-                                <span class="fw-light fs-14">(UI UX Design)</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2 me-4"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://www.figma.com/proto/JlLD8nby7nyauofo3p5A6S/Gail-Gash-Tander-Management?node-id=14-10088&viewport=7706%2C1022%2C0.16&t=AbWEH6tDy3GXz6CL-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=1%3A474&page-id=0%3A1">See
-                                            Figma Prototype</a> </span></p>
-
-                            </section>
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2 ">
-                            <img src="images/projects/gail-gash.jpg" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-                        </div>
-                    </div>
-
-                     <hr class="m-3 mb-0">
-                     <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">Unifycloud.in</small> <br>
-                                <span class="fw-light fs-14">(UI Development)</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2 me-4"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://unifycloud.in/">See
-                                            Live website</a> </span></p>
-
-                            </section>
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2 ">
-                            <img src="images/projects/unifycloudin.png" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">Unifycloud.com</small> <br>
-                                <span class="fw-light fs-14">(UI UX Design)</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2 me-4"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://www.figma.com/proto/ufEUoeuYn4QzJ2q2x6rFnO/unifycloud.com-website?page-id=0%3A1&node-id=0-2060&viewport=5757%2C1438%2C0.26&t=R7RcM3iraHG6O4QD-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=0%3A2060">See
-                                            Figma Prototype</a> </span></p>
-
-                            </section>
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2 ">
-                            <img src="images/projects/uc-com 1.jpg" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-                        </div>
-                    </div>
-                     <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">Employee Management</small> <br>
-                                <span class="fw-light fs-14">(UI UX Designing )</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2 me-4"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://www.figma.com/proto/NMRzmj3SlgDmjKQt5baQym/employee-dashboard?node-id=25-5908&viewport=1009%2C-470%2C0.18&t=y2fRaO7Ymmlz9r89-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=25%3A5909&show-proto-sidebar=1&page-id=0%3A1">See
-                                            Figma Prototype</a> </span></p>
-
-                            </section>
-
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2 ">
-                            <img src="images/projects/infoneo-employee.png" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3 d-none ">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">Mytraveltown</small> <br>
-                                <span class="fw-light fs-14">(UI UX Design)</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2 me-4"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://www.figma.com/proto/Vj3CeJoQfg197nm2OsjVnq/MyTravelTown?page-id=0%3A1&node-id=859-306&viewport=35185%2C-18547%2C0.34&t=hqSqbWKmDYKpffhl-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=859%3A306&show-proto-sidebar=1">See
-                                            Figma Prototype</a> </span></p>
-
-                            </section>
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2 ">
-                            <img src="images/projects/mytraveltownbanner.png" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-
-                        </div>
-                    </div>
-                    <hr class="m-3 mb-0">
-                    <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">B2B freight platform</small> <br>
-                                <span class="fw-light fs-14">(UI UX Design)</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2 me-4"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://www.figma.com/proto/GnSjwYyfwaSk4bR8IMxsj6/Logistics-Management?node-id=89-3456&viewport=154%2C-2200%2C0.16&t=gBaxnTFmXdyinTCp-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=8%3A11027&page-id=0%3A1">
-                                            See Figma Prototype</a> </span></p>
-
-                            </section>
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2 ">
-                            <img src="images/projects/b2b.png" class="projects-image img-fluid" alt="" loading="lazy"
-                                decoding="async">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3 d-none">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">MBSPSU</small> <br>
-                                <span class="fw-light fs-14">(UI Development )</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2 me-4"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://mbspsu.ac.in/en/">See Live Website</a> </span></p>
-
-                            </section>
-
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2 ">
-                            <img src="images/projects/mbspsu-banner.png" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3 d-none">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">Laborers Management</small> <br>
-                                <span class="fw-light fs-14">(UI UX Designing)</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2 me-4"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://www.figma.com/proto/NXpt3rC88bBLKqxg1CW2kq/Untitled?node-id=43-15251&viewport=1065%2C787%2C0.14&t=3A3jflKrITD2OT5D-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=43%3A15251&show-proto-sidebar=1&page-id=0%3A1">See
-                                            Figma Prototype</a>
-                                    </span></p>
-
-                            </section>
-
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2 ">
-                            <img src="images/projects/Laborers-Management.png" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-                        </div>
-                    </div>
-                    
-                    
-
-                    
-                    <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3 d-none">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">logistics Warehouse</small> <br>
-                                <span class="fw-light fs-14">(UI UX Design)</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2 me-4"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://www.figma.com/proto/iaYlLnx32zB4PZa1HLbxyB/OF-BUSINESS?node-id=96-3060&viewport=150%2C337%2C0.45&t=8ee5bcDojSvwiryX-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=8%3A3069&page-id=0%3A1">
-                                            See Figma Prototype</a> </span></p>
-
-                            </section>
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2 ">
-                            <img src="images/projects/ofbusiness.png" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3 d-none">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">Unitech</small> <br>
-                                <span class="fw-light fs-14">(UI UX Design)</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2 me-4"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://www.figma.com/proto/PsTxq0rKm0cJubJVeeDA48/unitech-dashboard?page-id=0%3A1&node-id=1-2&viewport=281%2C75%2C0.41&t=rAklQBBhD3Yt49sz-1&scaling=min-zoom&content-scaling=fixed">See
-                                            Figma Prototype</a> </span></p>
-
-                            </section>
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2 ">
-                            <img src="images/projects/banner-unitech.png" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-                        </div>
-                    </div>
-                    
-                    
-                    <hr class="m-3 mb-0 d-none">
-
-                    <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3 d-none">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">BRNS</small> <br>
-                                <span class="fw-light fs-14">(UI UX Design)</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://www.figma.com/proto/wAARp66GAaLU1HMpY2P5Ed/BRNS?page-id=0%3A1&node-id=1-10959&viewport=-90%2C154%2C0.08&t=reDzO8Sij1d8gb8e-1&scaling=min-zoom&content-scaling=fixed">See
-                                            Figma Prototype</a> </span></p>
-
-                            </section>
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2">
-                            <img src="images/projects/brnsbanner.png" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3 d-none">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">Runcon</small> <br>
-                                <span class="fw-light fs-14">(UI UX Design)</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://www.figma.com/proto/TO5wgUhREiRJJTDMGOW6xT/Runcon-ui?page-id=0%3A1&node-id=1-2&viewport=599%2C240%2C0.14&t=eHdVOgflkn0sMML1-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A2">See
-                                            Figma Prototype</a> </span></p>
-
-                            </section>
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2">
-                            <img src="images/projects/runconbanner.png" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3 d-none">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">HR Management</small> <br>
-                                <span class="fw-light fs-14">(UI UX Design)</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://www.figma.com/proto/mnw9d9yuoohZa6NXq09pU5/hr-management-dashboard?page-id=0%3A1&node-id=3-231&viewport=478%2C957%2C0.19&t=01NHWdr7HxyP3W3T-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=3%3A231">See
-                                            Figma Prototype</a> </span></p>
-                                <p class="mb-2 me-lg-4 me-0"> <span class="checkit"> </span></p>
-                            </section>
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2">
-                            <img src="images/projects/hr-management.png" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-
-                        </div>
-                    </div>
-
-                    <hr class="m-3 mb-0 d-none">
-
-                    <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3 d-none">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">Milan-Indian Navy</small> <br>
-                                <span class="fw-light fs-14">(UI Development )</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2 me-4"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://www.ifrmilan26.com/">See Live Website</a> </span></p>
-
-                            </section>
-
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2 ">
-                            <img src="images/projects/milan-banner.png" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 mt-2 mt-lg-3 d-none">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">Proptifi Admin Panel</small> <br>
-                                <span class="fw-light fs-14">(UI UX Design)</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2 me-4"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://www.figma.com/proto/M5qQdW7dhbsI3XvhI5y4FG/proptifi-admin?page-id=0%3A1&node-id=112-64335&viewport=-3637%2C732%2C0.43&t=mDxHmYEesxBHVsqT-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=149%3A67058&show-proto-sidebar=1">
-                                            See Figma Prototype</a> </span></p>
-
-                            </section>
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2 ">
-                            <img src="images/projects/proptify-admin.png" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-                        </div>
-                    </div>
-                    <div class=" d-none">
-                        <div class="projects-info mb-0">
-                            <section>
-                                <small class="projects-tag fs-5">CallHub</small> <br>
-                                <span class="fw-light fs-14">(UI UX Design)</span>
-                            </section>
-                            <section class="d-flex justify-content-between align-items-center">
-                                <p class="mb-2"> <span class="checkit"> <a class="link-btn" target="_blank"
-                                            href="https://www.figma.com/proto/X888hGLwCQBkU0B0D7B972/Untitled?page-id=0%3A1&node-id=18-2560&viewport=934%2C479%2C0.07&t=tolRbefeXT1IfTp6-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=18%3A2560&show-proto-sidebar=1">See
-                                            Figma Prototype</a> </span></p>
-                                <p class="mb-2 me-lg-4 me-0"> <span class="checkit"> </span></p>
-                            </section>
-                        </div>
-                        <div class="projects-thumb p-3 mt-0 mb-2">
-                            <img src="images/projects/callhub.png" class="projects-image img-fluid" alt=""
-                                loading="lazy" decoding="async">
-
-                        </div>
-                    </div>
-
-                </div>
+        <!-- ── Project 01: Nimbus Design System ── -->
+        <article class="work-entry">
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-md-4 col-lg-3">
+              <img src="img/Design-system.jpg" alt="Design System screenshot" class="work-entry-img w-100"  />
             </div>
-        </section>
-    </main>
+            <div class="col-12 col-md-8 col-lg-9">
+              
+              <h3 class="work-title-serif">
+                Design System That Scale
+                <a href="case-study-nimbus.html" class="work-action-link">
+                  Read Case Study <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </h3>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row">
+              <div class="work-quote">
+                "Design Once -&gt; Define the Rule -&gt; Scale With Confidence."
+              </div>
 
-                <div class="col-lg-12 col-12">
-                    <div class="copyright-text-wrap">
-                        <p class="mb-0">
-                            <span class="copyright-text">Copyright © 2026 <a href="#">Mayank Raj</a>. All rights
-                                reserved.</span>
-                        </p>
-                    </div>
-                </div>
+              <p class="work-summary-body">
+                Built a scalable 3-layer design system which is Foundation &rarr; Semantic &rarr; Component&mdash;reframing screen
+                design from &ldquo;how this screen looks&rdquo; to &ldquo;what rules future screens must follow.&rdquo;
+              </p>
 
+              <div class="work-impact-banner">
+                <strong>Impact:</strong><br />
+                <p class="mb-0">Shared token language across 50+ engineers, WCAG 2.1 AA compliance with AAA contrast
+                  targets for key UI elements, 25% reduction in product delivery time</p>
+              </div>
             </div>
+          </div>
+        </article>
+
+        <!-- ── Project 02: Proptifi AI Visualization ── -->
+        <article class="work-entry">
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-md-4 col-lg-3">
+              <img src="img/user-panal.png" alt="Proptifi website screenshot" class="work-entry-img w-100"  />
+            </div>
+            <div class="col-12 col-md-8 col-lg-9">
+              <h3 class="work-title-serif">
+                Proptifi &mdash; AI Property Visualization
+                <a href="case-study-proptifi.html" class="work-action-link">
+                  Read Case Study <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </h3>
+
+              <div class="work-quote">
+                "Making complex AI tools feel immediate, predictable, and trustworthy for non-technical users."
+              </div>
+
+              <p class="work-summary-body">
+                Designed an AI-powered SaaS platform making property transformation approachable for non-technical users
+                through a unified upload &rarr; configure &rarr; generate &rarr; compare workflow across 5 generative tools (Fresh
+                Look, Sky Color, Colors &amp; Textures, Text-to-Image, and Precision+).
+              </p>
+
+              <div class="work-impact-banner">
+                <strong>Impact:</strong>
+                <p class="mb-0">Reduced property staging turnaround from days to minutes &middot; Built high user
+                  confidence through real-time preview</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Project 03: AI Command Center ── -->
+        <article class="work-entry">
+          <div class="row g-3 align-items-start">
+            <div class="col-12 col-md-4 col-lg-3">
+              <img src="img/aicommandcenter.jpg" alt="AI Command Center screenshot" class="work-entry-img w-100"  />
+            </div>
+            <div class="col-12 col-md-8 col-lg-9">
+              <h3 class="work-title-serif">
+                AI Command Center
+                <a href="case-study-ai-command-center.html" class="work-action-link">
+                  Read Case Study <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </h3>
+
+              <div class="work-quote">
+                "Resolving accumulated UX debt through systematic tokens and verified contrast rules."
+              </div>
+
+              <p class="work-summary-body">
+                Audited and systematically restructured accumulated UX debt in an enterprise AI dashboard &mdash; creating 48
+                color tokens, 79 context-scoped typography styles, and validating contrast ratios to strict WCAG AA/AAA
+                compliance across both dark and light surfaces.
+              </p>
+
+              <div class="work-impact-banner">
+                <strong>Impact:</strong>
+                <p class="mb-0">48 color tokens &middot; 79 typography styles &middot; 100% WCAG AAA contrast compliance
+                  eliminating cross-team friction</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Additional Projects ── -->
+        <h3 class="work-title-serif mt-5">Additional Projects</h3>
+        <div class="row g-3">
+
+          <!-- Proptifi Website -->
+          <div class="col-12 col-lg-6">
+            <article class="work-entry2">
+              <div class="row g-2 align-items-start">
+                <div class="col-12 col-sm-5">
+                  <img src="img/proptifibanner.png" alt="Proptifi website screenshot" class="work-entry-img w-100" style="border-radius:8px;" />
+                </div>
+                <div class="col-12 col-sm-7">
+                  <section class="d-flex flex-column justify-content-between h-100">
+                    <aside>
+                      <h3 class="work-title-serif">Proptifi website</h3>
+                      <p class="work-summary-body">
+                        Designed a modern, responsive real estate website that simplifies property discovery and
+                        presents complex property information through a clear, intuitive user experience across desktop,
+                        tablet, and mobile.
+                      </p>
+                    </aside>
+                    <aside>
+                      <a target="_blank"
+                        href="https://www.figma.com/proto/mEoY0XppgQCvyWraLPKcWj/proptify-prototype-website?page-id=0%3A1&node-id=30-7750&viewport=4996%2C424%2C0.14&t=XSE0yoiF1NiC9Ou9-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=30%3A7750&show-proto-sidebar=1"
+                        class="work-action-link2 mb-2">
+                        See Figma Prototype <i class="bi bi-arrow-up-right"></i>
+                      </a>
+                    </aside>
+                  </section>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- GAIL Tender -->
+          <div class="col-12 col-lg-6">
+            <article class="work-entry2">
+              <div class="row g-2 align-items-start">
+                <div class="col-12 col-sm-5">
+                  <img src="img/gail-gash.jpg" alt="GAIL Tender Management screenshot" class="work-entry-img w-100" style="border-radius:8px;" />
+                </div>
+                <div class="col-12 col-sm-7">
+                  <section class="d-flex flex-column justify-content-between h-100">
+                    <aside>
+                      <h3 class="work-title-serif">GAIL Tender</h3>
+                      <p class="work-summary-body">
+                        Streamlined multi-stage procurement and tender approval workflows for major energy
+                        infrastructure operations.
+                      </p>
+                    </aside>
+                    <aside>
+                      <a target="_blank"
+                        href="https://www.figma.com/proto/JlLD8nby7nyauofo3p5A6S/Gail-Gash-Tander-Management?node-id=14-10088&viewport=7706%2C1022%2C0.16&t=AbWEH6tDy3GXz6CL-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=1%3A474&page-id=0%3A1"
+                        class="work-action-link2 mb-2">
+                        See Figma Prototype <i class="bi bi-arrow-up-right"></i>
+                      </a>
+                    </aside>
+                  </section>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Bhavini -->
+          <div class="col-12 col-lg-6 mt-0">
+            <article class="work-entry2">
+              <div class="row g-2 align-items-start">
+                <div class="col-12 col-sm-5">
+                  <img src="img/bhavinibanner.png" alt="Bhavini screenshot" class="work-entry-img w-100" style="border-radius:8px;" />
+                </div>
+                <div class="col-12 col-sm-7">
+                  <section class="d-flex flex-column justify-content-between h-100">
+                    <aside>
+                      <h3 class="work-title-serif">Bhavini</h3>
+                      <p class="work-summary-body">
+                        Public sector energy platform UI design and responsive frontend development with strict
+                        accessibility requirements.
+                      </p>
+                    </aside>
+                    <aside class="d-flex flex-column gap-1">
+                      <a target="_blank"
+                        href="https://www.figma.com/proto/nsyUV6wRQ3XkKcNMQMaD4z/bhavini-ui?page-id=0%3A1&node-id=4-5873&viewport=-2164%2C7845%2C0.24&t=uLp84Qq9MG9FFcln-1&scaling=min-zoom&content-scaling=fixed"
+                        class="work-action-link2 mb-2">
+                        See Figma Prototype <i class="bi bi-arrow-up-right"></i>
+                      </a>
+                      <a target="_blank" href="https://bhavini.nic.in/en" class="work-action-link2 mb-2">
+                        See Live website <i class="bi bi-arrow-up-right"></i>
+                      </a>
+                    </aside>
+                  </section>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Unifycloud.in -->
+          <div class="col-12 col-lg-6 mt-0">
+            <article class="work-entry2">
+              <div class="row g-2 align-items-start">
+                <div class="col-12 col-sm-5">
+                  <img src="img/unifycloudin.png" alt="Unifycloud.in screenshot" class="work-entry-img w-100" style="border-radius:8px;" />
+                </div>
+                <div class="col-12 col-sm-7">
+                  <section class="d-flex flex-column justify-content-between h-100">
+                    <aside>
+                      <h3 class="work-title-serif">Unifycloud.in</h3>
+                      <p class="work-summary-body">
+                        Developed a modern,  for UnifyCloud, translating UI designs into
+                        pixel-perfect interfaces with a focus on performance, accessibility, and consistent experiences
+                        across desktop, tablet, and mobile.
+                      </p>
+                    </aside>
+                    <aside>
+                      <a target="_blank" href="https://unifycloud.in" class="work-action-link2 mb-2">
+                        See Live website <i class="bi bi-arrow-up-right"></i>
+                      </a>
+                    </aside>
+                  </section>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Employee Management -->
+          <div class="col-12 col-lg-6 mt-0">
+            <article class="work-entry2">
+              <div class="row g-2 align-items-start">
+                <div class="col-12 col-sm-5">
+                  <img src="img/infoneo-employee.png" alt="Employee Management screenshot" class="work-entry-img w-100" style="border-radius:8px;" />
+                </div>
+                <div class="col-12 col-sm-7">
+                  <section class="d-flex flex-column justify-content-between h-100">
+                    <aside>
+                      <h3 class="work-title-serif">Employee Management</h3>
+                      <p class="work-summary-body">
+                        Internal operational dashboard managing employee records, access control, and cross-department
+                        workflows.
+                      </p>
+                    </aside>
+                    <aside>
+                      <a target="_blank"
+                        href="https://www.figma.com/proto/NMRzmj3SlgDmjKQt5baQym/employee-dashboard?node-id=25-5908&viewport=1009%2C-470%2C0.18&t=y2fRaO7Ymmlz9r89-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=25%3A5909&show-proto-sidebar=1&page-id=0%3A1"
+                        class="work-action-link2 mb-2">
+                        See Figma Prototype <i class="bi bi-arrow-up-right"></i>
+                      </a>
+                    </aside>
+                  </section>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Freight Platform -->
+          <div class="col-12 col-lg-6 mt-0">
+            <article class="work-entry2">
+              <div class="row g-2 align-items-start">
+                <div class="col-12 col-sm-5">
+                  <img src="img/b2b.png" alt="Freight platform screenshot" class="work-entry-img w-100" style="border-radius:8px;" />
+                </div>
+                <div class="col-12 col-sm-7">
+                  <section class="d-flex flex-column justify-content-between h-100">
+                    <aside>
+                      <h3 class="work-title-serif">Freight platform</h3>
+                      <p class="work-summary-body">
+                        End-to-end logistics management and shipment booking workflows for industrial supply chain
+                        clients.
+                      </p>
+                    </aside>
+                    <aside>
+                      <a target="_blank"
+                        href="https://www.figma.com/proto/GnSjwYyfwaSk4bR8IMxsj6/Logistics-Management?node-id=89-3456&viewport=154%2C-2200%2C0.16&t=gBaxnTFmXdyinTCp-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=8%3A11027&page-id=0%3A1"
+                        class="work-action-link2 mb-2">
+                        See Figma Prototype <i class="bi bi-arrow-up-right"></i>
+                      </a>
+                    </aside>
+                  </section>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div><!-- /row additional projects -->
+      </div>
+    </section>
+
+    <!-- ─────────── 05. THE WORK BEHIND THE WORK (SYSTEMS & LEADERSHIP) ─────────── -->
+    <section id="systems">
+      <div class="container">
+        <div class="mb-4">
+          <div class="eyebrow-label">SYSTEMS &amp; PRACTICE</div>
+          <h2 class="headline-editorial">How I actually work.</h2>
+          <p class="headline-sub">
+            Great enterprise interfaces don't happen by accident. They are built on deliberate systems thinking,
+            technical fluency, and disciplined focus on user clarity.
+          </p>
         </div>
-    </footer>
 
+        <div class="systems-grid">
+          <!-- Card 01 -->
+          <div class="systems-card">
+            <div class="systems-num-icon">
+              <span class="systems-num">01</span>
+              <span class="systems-icon">&#9678;</span>
+            </div>
+            <h3 class="systems-card-title">Systems Thinking</h3>
+            <p class="systems-card-desc">
+              I don't design isolated screens; I design the scalable rule engines that generate them. From semantic
+              design tokens in Figma Variables to production CSS custom properties, every pattern serves dozens of
+              future use cases.
+            </p>
+            <div class="systems-tags">
+              <span class="editorial-tag emerald">Visual Design</span>
+              <span class="editorial-tag emerald">Interaction Design</span>
+              <span class="editorial-tag emerald">Design Tokens</span>
+              <span class="editorial-tag emerald">Component Libraries</span>
+              <span class="editorial-tag emerald">Responsive Design</span>
+              <span class="editorial-tag emerald">Micro-interactions</span>
+            </div>
+          </div>
 
+          <!-- Card 02 -->
+          <div class="systems-card">
+            <div class="systems-num-icon">
+              <span class="systems-num">02</span>
+              <span class="systems-icon">&#8984;</span>
+            </div>
+            <h3 class="systems-card-title">Design to Code</h3>
+            <p class="systems-card-desc">
+              I design and build responsive interfaces that adapt seamlessly across large, medium, and small screens. I think through layout behavior, component states, content hierarchy, and implementation constraints early, making design-to-development a continuous conversation rather than a handoff.
+            </p>
+            <div class="systems-tags">
+              <span class="editorial-tag emerald">Angular UI</span>
+              <span class="editorial-tag emerald">React UI</span>
+              <span class="editorial-tag emerald">HTML5</span>
+              <span class="editorial-tag emerald">CSS3</span>
+              <span class="editorial-tag emerald">Bootstrap</span>
+              <span class="editorial-tag emerald">Responsive Design</span>
+              <span class="editorial-tag emerald">Design-to-Code QA</span>
+            </div>
+          </div>
 
-    <!-- JAVASCRIPT FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/click-scroll.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/magnific-popup-options.js"></script>
-    <script src="js/custom.js"></script>
+          <!-- Card 03 -->
+          <div class="systems-card">
+            <div class="systems-num-icon">
+              <span class="systems-num">03</span>
+              <span class="systems-icon">&#8596;&#65038;</span>
+            </div>
+            <h3 class="systems-card-title">Legacy Transformation</h3>
+            <p class="systems-card-desc">
+              When I inherit a legacy product, I don't start from a blank canvas, I start by mapping what's already
+              there. I simplify dense interfaces, rebuild information hierarchy, and streamline workflows while
+              respecting the patterns users already know, so improvements land without retraining anyone.
+            </p>
+            <div class="systems-tags">
+              <span class="editorial-tag emerald">Information Architecture</span>
+              <span class="editorial-tag emerald">Workflow Simplification</span>
+              <span class="editorial-tag emerald">Legacy Modernization</span>
+              <span class="editorial-tag emerald">Cognitive Load Reduction</span>
+            </div>
+          </div>
 
+          <!-- Card 04 -->
+          <div class="systems-card">
+            <div class="systems-num-icon">
+              <span class="systems-num">04</span>
+              <span class="systems-icon">&#11041;</span>
+            </div>
+            <h3 class="systems-card-title">Accessibility by Design</h3>
+            <p class="systems-card-desc">
+              I treat accessibility as a foundation, not an audit checklist at the end of a project. WCAG 2.1 principles
+              shape my decisions on color, typography, interaction states, and focus behavior from the start, so the
+              result stays usable across different needs and devices by default
+            </p>
+            <div class="systems-tags">
+              <span class="editorial-tag emerald">WCAG 2.1 AA/AAA</span>
+              <span class="editorial-tag emerald">Contrast Auditing</span>
+              <span class="editorial-tag emerald">Accessible States</span>
+              <span class="editorial-tag emerald">Keyboard Navigation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────── 08. BEYOND THE JOB TITLE (ABOUT) ─────────── -->
+    <section id="about">
+      <div class="container">
+        <div class="mb-4">
+          <div class="eyebrow-label">Philosophy &amp; Values</div>
+          <h2 class="headline-editorial">Beyond the job title.</h2>
+        </div>
+
+        <div class="about-grid-ed">
+          <div class="about-narrative">
+            <p>
+              I enjoy solving problems where the interface is only one part of the challenge. I look at the bigger
+              picture user needs, information architecture, business goals, accessibility, and technical constraints to
+              create experiences that are clear, useful, and practical.
+            </p>
+            <p>
+              My experience with design systems and frontend development helps me think through responsive behavior, component states, edge cases, and implementation constraints early making collaboration with engineers more effective.
+            </p>
+            <p>
+              I'm especially drawn to complex enterprise products, SaaS platforms, and AI-powered workflows where
+              thoughtful design can turn complicated processes into simpler, more confident user experiences.
+            </p>
+
+            <div class="d-flex flex-wrap gap-2 mt-4">
+              <a href="https://linkedin.com/in/mayankraj" target="_blank" rel="noopener"
+                class="btn-editorial-secondary">
+                <i class="bi bi-linkedin"></i> LinkedIn Profile
+              </a>
+            </div>
+          </div>
+
+          <div class="values-column">
+            <div class="value-box-ed">
+              <h3 class="value-title-ed">Clarity over decoration</h3>
+              <p class="value-desc-ed mb-0">Every element should have a purpose. I focus on clear hierarchy, meaningful
+                interactions, and simple workflows that help users understand what matters and what to do next.</p>
+            </div>
+
+            <div class="value-box-ed">
+              <h3 class="value-title-ed">Accessibility from the beginning</h3>
+              <p class="value-desc-ed mb-0">Accessibility is part of the design process, not a final checklist. I
+                consider contrast, focus states, keyboard interaction, readable content, and inclusive experiences from
+                the foundation of a product.</p>
+            </div>
+
+            <div class="value-box-ed">
+              <h3 class="value-title-ed">Design that survives contact with code</h3>
+              <p class="value-desc-ed mb-0">A good design should work in the real world, not just in Figma. I think
+                through responsive layouts, component states, edge cases, and implementation constraints to create
+                designs that can be built faithfully and scale in production.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────── 09. CONTACT & CLOSING ─────────── -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-block">
+          <div class="eyebrow-label justify-content-center mb-2">Let's Connect</div>
+          <h2 class="contact-title-ed">Complex product problem?<br>Let's make it simpler.</h2>
+          <p class="contact-sub-ed">
+            I'm open to <strong>Product Designer, UI/UX Designer, and Design Systems-focused</strong> opportunities where I can solve complex workflow problems,<br class="d-none d-md-block"> design AI experiences, and build scalable systems.
+          </p>
+
+          <div class="contact-pills-row">
+            <button class="btn-editorial-secondary" data-copy-email>
+              <i class="bi bi-clipboard"></i> Copy Email : mayank58.singh@gmail.com
+            </button>
+            <button class="btn-editorial-secondary" data-copy-phone>
+              <i class="bi bi-clipboard"></i> Copy Phone : +91 9015119802
+            </button>
+            <a href="https://linkedin.com/in/mayankraj" target="_blank" rel="noopener" class="btn-editorial-secondary">
+              <i class="bi bi-linkedin"></i> LinkedIn
+            </a>
+            <a class="btn-editorial-secondary" target="_blank" href="img/mayank_raj_resume.pdf">
+              <i class="bi bi-file-earmark-person"></i> View Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ─────────── 10. FOOTER ─────────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-flex">
+        <div>
+          &copy; 2026 Mayank Raj. Designed with editorial craft &amp; clean code.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

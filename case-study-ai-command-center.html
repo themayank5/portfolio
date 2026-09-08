@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI Command Center — Case Study by Mayank Raj. Building an accessible design foundation for an AI dashboard." />
+  <title>AI Command Center — Mayank Raj</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="cs-page">
+
+<!-- NAV -->
+<nav class="cs-nav">
+  <div class="container">
+    <div class="cs-nav-inner">
+      <a href="index.html" class="cs-back"><i class="bi bi-arrow-left"></i> Back to Portfolio</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="cs-hero">
+  <div class="container">
+    <div class="cs-hero-label label">Case Study &middot; 03</div>
+    <h1 class="cs-hero-title">AI Command Center</h1>
+    <p class="cs-hero-sub">
+      I established a documented, accessibility-verified design foundation to address accumulated UX inconsistencies, improve interface clarity, and create a shared system that design and engineering could confidently build on.
+    </p>
+    <div class="cs-meta-row">
+      <span class="tag-teal tag">Role:- UI/UX Designer</span>
+      <span class="tag-teal tag">Focus:- UX Audit &middot; Accessibility &middot; Design System &middot; UI Design</span>
+      <span class="tag-teal tag">Tool:- Figma</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- BODY -->
+<div class="container">
+  <div class="cs-body">
+
+    <!-- CONTENT -->
+    <main class="cs-content">
+
+      <!-- Overview -->
+      <div class="cs-section" id="overview">
+        <div class="cs-section-num">01 &mdash; OVERVIEW</div>
+        <h2 class="cs-section-title">A foundation before the redesign</h2>
+        <div class="cs-section-body">
+          <p>As the AI Command Center evolved, rapid product development had introduced inconsistencies across the interface&mdash;from hierarchy and interaction patterns to colour, typography, spacing, and accessibility.</p>
+          <p>Before redesigning individual screens, I focused on creating a reliable design foundation that could bring consistency and accessibility to the wider product.</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Problem -->
+      <div class="cs-section" id="problem">
+        <div class="cs-section-num">02 &mdash; THE PROBLEM</div>
+        <h2 class="cs-section-title">Accumulated UX debt</h2>
+        <div class="cs-section-body">
+          <p>The product had grown quickly, but the underlying UI patterns had not evolved at the same pace:</p>
+          <img src="./img/Accumulated.png" class="img-fluid w-100" alt="Accumulated UX debt diagram">
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Audit -->
+      <div class="cs-section" id="audit">
+        <div class="cs-section-num">03 &mdash; AUDIT &amp; RESEARCH</div>
+        <h2 class="cs-section-title">Three areas of investigation</h2>
+        <p>I started by auditing the existing product rather than immediately redesigning individual screens.</p>
+        <div class="cs-steps">
+          <div class="cs-step">
+            <div class="cs-step-num">01</div>
+            <div>
+              <div class="cs-step-title">Hierarchy audit</div>
+              <div class="cs-step-desc">Reviewed page titles, section headers, card headers, table headers, and supporting labels to identify inconsistent hierarchy patterns.</div>
+            </div>
+          </div>
+          <div class="cs-step">
+            <div class="cs-step-num">02</div>
+            <div>
+              <div class="cs-step-title">Interaction audit</div>
+              <div class="cs-step-desc">Mapped primary and secondary actions across cards, modals, tables, forms, and navigation.</div>
+            </div>
+          </div>
+          <div class="cs-step">
+            <div class="cs-step-num">03</div>
+            <div>
+              <div class="cs-step-title">Accessibility audit</div>
+              <div class="cs-step-desc">Tested colour combinations, text, icons, borders, states, and interactive elements against WCAG AA and AAA requirements.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Color -->
+      <div class="cs-section" id="color">
+        <div class="cs-section-num">04 &mdash; DESIGN FOUNDATION</div>
+        <h2 class="cs-section-title">A three-layer colour system</h2>
+        <div class="cs-section-body">
+          <p>Rather than a flat list of hex values, colours were organised into three layers &mdash; each layer serving a different purpose:</p>
+        </div>
+        <div class="cs-principles">
+          <div class="cs-principle">
+            <div class="cs-principle-title" style="color:var(--accent-light);">Brand</div>
+            <div class="cs-principle-desc">Primary indigo &middot; Secondary terracotta. The identifiable colours of the product &mdash; used for key actions, highlights, and brand moments.</div>
+          </div>
+          <div class="cs-principle">
+            <div class="cs-principle-title" style="color:var(--text-2);">Neutral</div>
+            <div class="cs-principle-desc">Text &middot; Surfaces &middot; Borders. The structural colours that hold the interface together &mdash; tiered by emphasis from primary text to background layers.</div>
+          </div>
+          <div class="cs-principle">
+            <div class="cs-principle-title" style="color:var(--teal);">Semantic</div>
+            <div class="cs-principle-desc">Info &middot; Success &middot; Warning &middot; Danger &middot; Progress &middot; Disabled &middot; Pending. Colours that communicate state and meaning &mdash; each mapped to consistent roles.</div>
+          </div>
+        </div>
+        <div class="cs-section-body mt-3">
+          <p>Each semantic colour was mapped to four consistent roles across the interface: <strong>Text/Icon &middot; Hover &middot; Border &middot; Light (background)</strong></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Typography -->
+      <div class="cs-section" id="typography">
+        <div class="cs-section-num">05 &mdash; TYPOGRAPHY</div>
+        <h2 class="cs-section-title">Creating a consistent visual language</h2>
+        <div class="cs-section-body">
+          <p>Once colour relationships were established, I defined the structural rules that determine how information is presented across the product.</p>
+        </div>
+        <div class="cs-steps" style="gap:8px;display:flex;flex-direction:row;flex-wrap:wrap;">
+          <div class="cs-step mb-0" style="padding:6px 16px;">
+            <div><div class="cs-step-title" style="font-size:.82rem;">Page Titles</div></div>
+          </div>
+          <div class="cs-step mb-0" style="padding:6px 16px;">
+            <div><div class="cs-step-title" style="font-size:.82rem;">Section Headers</div></div>
+          </div>
+          <div class="cs-step mb-0" style="padding:6px 16px;">
+            <div><div class="cs-step-title" style="font-size:.82rem;">Card Headers</div></div>
+          </div>
+          <div class="cs-step mb-0" style="padding:6px 16px;">
+            <div><div class="cs-step-title" style="font-size:.82rem;">Table</div></div>
+          </div>
+          <div class="cs-step mb-0" style="padding:6px 16px;">
+            <div><div class="cs-step-title" style="font-size:.82rem;">Menu</div></div>
+          </div>
+          <div class="cs-step mb-0" style="padding:6px 16px;">
+            <div><div class="cs-step-title" style="font-size:.82rem;">KPIs</div></div>
+          </div>
+          <div class="cs-step mb-0" style="padding:6px 16px;">
+            <div><div class="cs-step-title" style="font-size:.82rem;">Modals</div></div>
+          </div>
+          <div class="cs-step mb-0" style="padding:6px 16px;">
+            <div><div class="cs-step-title" style="font-size:.82rem;">Notifications</div></div>
+          </div>
+          <div class="cs-step mb-0" style="padding:6px 16px;">
+            <div><div class="cs-step-title" style="font-size:.82rem;">Search</div></div>
+          </div>
+          <div class="cs-step mb-0" style="padding:6px 16px;">
+            <div><div class="cs-step-title" style="font-size:.82rem;">Dropdowns</div></div>
+          </div>
+          <div class="cs-step mb-0" style="padding:6px 16px;">
+            <div><div class="cs-step-title" style="font-size:.82rem;">System Messages</div></div>
+          </div>
+        </div>
+        <div class="cs-section-body mt-3">
+          <p>This produced <strong>79 named typography styles</strong> &mdash; each attached to a product context, making it clear which style belonged where.</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Accessibility -->
+      <div class="cs-section" id="accessibility">
+        <div class="cs-section-num">06 &mdash; Accessibility Validation</div>
+        <h2 class="cs-section-title">Testing against real usage</h2>
+        <div class="cs-section-body">
+          <p>Contrast validation was not run against abstract colour pairs &mdash; it was run against <strong>actual UI usage patterns</strong> in the product:</p>
+          <div class="cs-list">
+            <div class="cs-list-item">Brand colours as button backgrounds &mdash; white and dark text</div>
+            <div class="cs-list-item">Brand colours as badge and chip backgrounds</div>
+            <div class="cs-list-item">White and dark text against all coloured surfaces</div>
+            <div class="cs-list-item">Grayscale text values against white and light surfaces</div>
+            <div class="cs-list-item">Semantic colours across status components (alerts, badges, banners)</div>
+          </div>
+          <p class="mt-3">All colour combinations were validated against both <strong>WCAG AA</strong> (minimum compliance) and <strong>WCAG AAA</strong> (enhanced compliance) requirements &mdash; with the results documented so both design and engineering could reference them without re-running tests.</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Outcome -->
+      <div class="cs-section" id="impact">
+        <div class="cs-section-num">07 &mdash; OUTCOME</div>
+        <h2 class="cs-section-title">A shared source of truth</h2>
+        <div class="cs-outcome">
+          <div class="cs-list">
+            <div class="cs-list-item">
+              <h5 class="mb-0">01 &mdash; Consistent interface</h5>
+              <p class="mb-0">Reduced product delivery time by 25% through reusable foundations, semantic tokens, and
+                shared components.</p>
+            </div>
+            <hr>
+            <div class="cs-list-item">
+              <h5 class="mb-0">02 &mdash; Accessible by foundation</h5>
+              <p class="mb-0">Accessibility considerations were built into the design tokens and usage rules rather than handled screen by screen.</p>
+            </div>
+            <hr>
+            <div class="cs-list-item">
+              <h5 class="mb-0">03 &mdash; Better design&ndash;engineering alignment</h5>
+              <p class="mb-0">Created a documented reference that helped teams make decisions from the same set of rules.</p>
+            </div>
+            <hr>
+            <div class="cs-list-item">
+              <h5 class="mb-0">04 &mdash; Scalable product foundation</h5>
+              <p class="mb-0">Established reusable patterns that could support new dashboard features and future product areas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Final Product UI -->
+      <div class="cs-section" id="final-ui">
+        <div class="cs-section-num">08 &mdash; Final Product UI</div>
+        <div class="cs-outcome bg-white p-0">
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/comman-center/img-1.jpg" class="d-block w-100" alt="AI Command Center UI 1">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/comman-center/img-2.jpg" class="d-block w-100" alt="AI Command Center UI 2">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/comman-center/img-3.png" class="d-block w-100" alt="AI Command Center UI 3">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/comman-center/img-4.png" class="d-block w-100" alt="AI Command Center UI 4">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/comman-center/img-5.jpg" class="d-block w-100" alt="AI Command Center UI 5">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/comman-center/img-6.jpg" class="d-block w-100" alt="AI Command Center UI 6">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/comman-center/img-7.jpg" class="d-block w-100" alt="AI Command Center UI 7">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/comman-center/img-8.jpg" class="d-block w-100" alt="AI Command Center UI 8">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/comman-center/img-9.jpg" class="d-block w-100" alt="AI Command Center UI 9">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/comman-center/img-10.jpg" class="d-block w-100" alt="AI Command Center UI 10">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page nav -->
+      <div class="row g-3 Page-nav">
+        <div class="col-12 col-sm-6">
+          <h2 class="Page-nav-h2">
+            <a target="_blank"
+              href="https://www.figma.com/proto/Y5ZL1iqNdvE3gtudbFazqo/AI-Command-Center?node-id=31-13650&viewport=721%2C-2513%2C0.4&t=WiKpLVjhN22cwYap-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=15%3A1681&show-proto-sidebar=1&page-id=0%3A1"
+              class="cs-nav-next">
+              <div class="cs-nav-dir">View Figma Prototype &rarr;</div>
+            </a>
+          </h2>
+        </div>
+        <div class="col-12 col-sm-6 text-sm-end">
+          <h2 class="Page-nav-h2">
+            <a target="_blank" href="img/command-center-doc.pdf" class="cs-nav-next">
+              <div class="cs-nav-dir">View Full Design Documentation &rarr;</div>
+            </a>
+          </h2>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,874 @@
+# MAYANK RAJ
+
+## Product Designer · Enterprise UX · Design Systems
+
+### I turn complex product workflows into clear, scalable experiences—and build the systems that keep them consistent as products grow.
+
+4+ years designing enterprise SaaS products, AI-powered dashboards, complex web applications, government platforms, and scalable design systems.
+
+**Enterprise SaaS · AI Products · Design Systems · Accessibility · Design Engineering**
+
+**[View Work] [Download Resume]**
+
+---
+
+# SELECTED WORK
+
+## 01 — Nimbus Design System
+
+### Designing the system behind scalable products
+
+**Product Designer · Enterprise SaaS · Design Systems · Accessibility**
+
+As enterprise SaaS products grow, inconsistency accumulates through hundreds of small design decisions. Different product areas were using different patterns, teams were repeatedly solving the same problems, and there was no shared design language between design and engineering.
+
+### The challenge
+
+Create a scalable design system that could establish a consistent visual language, reduce repeated design decisions, support dense enterprise interfaces, and provide clear rules without restricting product flexibility.
+
+### The reframe
+
+Instead of asking:
+
+> "How should this screen look?"
+
+I reframed the problem as:
+
+> "What rules should determine how future screens are designed?"
+
+That shift—from designing individual screens to designing the rules screens follow—became the foundation of the system.
+
+### My approach
+
+**01 — Understand**
+
+Identified recurring visual and structural decisions across the product.
+
+**02 — Define**
+
+Established principles for hierarchy, meaning, spacing, structure, shape, and depth.
+
+**03 — Systemize**
+
+Translated those decisions into reusable foundations and semantic rules.
+
+**04 — Apply**
+
+Tested the system against real product scenarios and realistic information density.
+
+### System architecture
+
+**Foundation**
+
+Color · Typography · Spacing · Sizing · Radius · Grid · Elevation · Borders · Opacity · Breakpoints
+
+↓
+
+**Semantic**
+
+Text · Surface · Border · Icon · Action · Feedback · Selection · Focus · Data Visualization
+
+↓
+
+**Component**
+
+Button · Input · Checkbox · Radio · Badge · Tooltip · Tabs · Modal · Card · Search · Pagination
+
+↓
+
+**Product UI**
+
+Navigation · Layouts · Workflows · States · Feedback · Responsive experiences
+
+### Guiding principles
+
+**Consistency**
+Repeated decisions should produce predictable outcomes.
+
+**Meaning**
+Tokens communicate product intent rather than simply storing values.
+
+**Flexibility**
+The system should provide constraints without forcing every interface into the same composition.
+
+**Scalability**
+New product experiences should reuse the same foundations instead of recreating the visual language.
+
+### Impact
+
+* Established a consistent visual language across product experiences.
+* Reduced repeated design decisions through reusable foundations and patterns.
+* Created a shared design language between designers and developers.
+* Built a scalable foundation for future product experiences.
+
+### Key learning
+
+A design system is a **decision system**, not just a token library. Tokens define boundaries; principles define how those boundaries should be used.
+
+**[View Prototype] [Read Case Study]**
+
+---
+
+# 02 — Proptifi
+
+## Designing an AI-powered property visualization experience
+
+**Product Designer · UI/UX · AI Product · Responsive Web · Design System**
+
+**Duration:** 4 months
+**Platform:** Responsive web application
+
+### About the product
+
+Proptifi is an AI-powered SaaS platform that helps homeowners, interior designers, and real estate professionals visualize property transformations without hiring a designer or architect.
+
+Users upload an image, choose an AI tool, configure their requirements, and receive visual results within minutes.
+
+The platform includes:
+
+**Fresh Look · Sky Color · Colors & Textures · Text-to-Image · Precision+**
+
+### The problem
+
+Traditional property visualization is expensive, slow, and difficult to iterate on.
+
+The design challenge was:
+
+> **How might we make AI-powered property visualization simple enough for non-technical users while building confidence and trust in AI-generated results?**
+
+### User pain points
+
+* Difficult to visualize renovation ideas before committing time or money.
+* Uncertainty about which AI tool to use.
+* Traditional rendering is expensive and slow.
+* Limited transparency around AI-generated results can reduce trust.
+
+### Business goals
+
+* Increase product engagement.
+* Reduce visualization time.
+* Simplify AI image generation.
+* Encourage repeat usage.
+* Improve conversion on premium AI tools.
+
+### Discovery
+
+I combined stakeholder requirements with:
+
+**Stakeholder Interviews · Competitive Analysis · Secondary Research · User Journey Mapping · Feature Benchmarking**
+
+### Key insight
+
+Users wanted:
+
+* Fast results.
+* Minimal technical knowledge.
+* High-quality outputs.
+* A simple upload experience.
+* Multiple variations to compare.
+
+This led to a core design principle:
+
+> **Make AI powerful without making the workflow feel technical.**
+
+### Competitive opportunity
+
+I benchmarked Proptifi against:
+
+REimagine Home · Interior AI · Virtual Staging AI · AIHomeDesign
+
+The opportunity was to combine:
+
+**Unified dashboard + guided AI workflow + multiple AI editing modes + property-focused experience**
+
+within a single product.
+
+### User journey
+
+**Traditional**
+
+Hire designer → Wait days → Receive mockup → Request changes → Wait again
+
+**Proptifi**
+
+Login → Upload → Choose AI tool → Generate → Compare → Download
+
+### Core user flow
+
+Login
+↓
+Dashboard
+↓
+Select AI Tool
+↓
+Upload Image
+↓
+Configure
+↓
+Generate
+↓
+Compare Results
+↓
+Download / History
+
+### Key design decisions
+
+#### 01 — Upload-first onboarding
+
+The upload action is familiar and immediately communicates how to begin.
+
+**Why:**
+Users could enter the product and start creating without first understanding complex AI configuration.
+
+#### 02 — Consistent AI workflow
+
+Each AI tool follows the same fundamental interaction model.
+
+**Upload → Configure → Generate → Compare**
+
+**Why:**
+Learning one workflow makes the other AI tools easier to understand.
+
+#### 03 — Before & after comparison
+
+AI results can feel uncertain without a clear reference.
+
+**Why:**
+Side-by-side comparison makes the transformation immediately visible and helps users evaluate the generated result.
+
+#### 04 — Persistent navigation
+
+Users frequently switch between AI tools.
+
+**Why:**
+Persistent navigation supports exploration without requiring users to repeatedly return to a central screen.
+
+#### 05 — Progressive complexity
+
+The core workflow remains simple while configuration options are introduced when needed.
+
+**Why:**
+Non-technical users can complete the basic task without being overwhelmed by advanced controls.
+
+### Three-step experience
+
+**01 — Upload**
+
+Drag-and-drop or browse with guidance on image quality.
+
+**02 — Customize**
+
+Configure property type, room type, viewing angle, design style, image quality, gallery preferences, and variations.
+
+**03 — Explore & Compare**
+
+Review generated variations, compare results, download favorites, remove unwanted results, or generate more.
+
+### Design system
+
+Built a semantic, context-scoped typography and UI system so designers could use named styles and reusable patterns instead of repeatedly choosing raw values.
+
+The system supported:
+
+* Semantic typography
+* Color roles
+* Spacing
+* Radius
+* Components
+* Interaction states
+* Responsive layouts
+* Accessible color usage
+
+### Outcome
+
+A guided, trust-building workflow transformed a traditionally expensive and time-consuming visualization process into a self-serve digital experience designed to produce results within minutes.
+
+The same interaction model also allowed five different AI tools to feel like one cohesive product.
+
+**[View User Panel] [View Admin Panel] [View Website] [Read Case Study]**
+
+---
+
+# 03 — AI Command Center
+
+## Building an accessible foundation for an AI dashboard
+
+**UX Designer · Enterprise SaaS · Accessibility · Design System**
+
+### The problem
+
+The dashboard had accumulated UX debt through rapid product development:
+
+* Unclear header hierarchy.
+* Inconsistent CTA treatment.
+* Inconsistent use of color and typography.
+* Accessibility issues.
+* No single documented source of truth for foundational design decisions.
+
+Before redesigning the interface, the product needed a reliable foundation.
+
+### Audit focus
+
+I focused on three areas:
+
+**01 — Header hierarchy**
+
+Improved grouping and visual prioritization.
+
+**02 — CTA hierarchy**
+
+Created clearer action patterns across card states.
+
+**03 — Accessibility**
+
+Validated color combinations against WCAG requirements.
+
+### Design foundation
+
+#### Color
+
+Created a three-layer color system:
+
+**Brand**
+
+Primary indigo · Secondary terracotta
+
+**Neutral**
+
+Text · Surfaces · Borders
+
+**Semantic**
+
+Info · Success · Warning · Danger · Progress · Disabled · Pending
+
+Each semantic color was mapped to consistent roles:
+
+**Text/Icon · Hover · Border · Light**
+
+### Typography
+
+Rather than relying on one generic scale, typography was scoped to actual product contexts:
+
+Page Titles · Section Headers · Cards · Tables · Menus · KPIs · Modals · Notifications · Search · Dropdowns · System Messages
+
+### Spacing
+
+Established a 4px-based spacing scale with 9 steps.
+
+### Radius
+
+Established a 6-step radius scale plus a pill value for badges and chips.
+
+### Accessibility validation
+
+Ran contrast validation against **WCAG AA and AAA**.
+
+Testing was performed based on actual UI usage:
+
+* Brand colors as button backgrounds.
+* Brand colors as badge backgrounds.
+* White and dark text against colored surfaces.
+* Grayscale text against white and light surfaces.
+* Semantic colors across status components.
+
+### System scale
+
+**48** color tokens
+**79** typography styles
+**9** spacing steps
+**7** radius tokens
+
+### Outcome
+
+Created a documented, accessibility-verified foundation that gave design and engineering a shared reference for color, typography, spacing, and component decisions.
+
+Instead of relying on visual judgment for every screen, teams could work from a consistent and verifiable system.
+
+**[View Prototype] [Read Case Study]**
+
+---
+
+# WHAT I DO
+
+## Product Design
+
+I translate complex requirements, workflows, and user needs into clear product experiences.
+
+**UX Strategy · Information Architecture · User Flows · Interaction Design · Wireframing · Prototyping · Responsive Design**
+
+---
+
+## UX Research & Discovery
+
+I use research and product discovery to understand users, identify friction, and turn observations into design decisions.
+
+**User Interviews · Stakeholder Interviews · Secondary Research · Competitive Analysis · User Journey Mapping · Affinity Mapping · Usability Testing · A/B Testing**
+
+---
+
+## Design Systems
+
+I build reusable systems that connect foundations, semantics, components, and real product experiences.
+
+**Design Tokens · Semantic Tokens · Figma Variables · Components · Variants · Auto Layout · Component Libraries · Design Governance · Documentation**
+
+---
+
+## Accessibility
+
+I consider accessibility as part of the design process rather than something added at the end.
+
+**WCAG 2.1 AA/AAA · Color Contrast · Accessible Components · Interaction States · Responsive Accessibility**
+
+---
+
+## AI Product Design
+
+I design AI experiences that make complex capabilities understandable, controllable, and useful.
+
+**AI Workflows · AI Dashboards · AI Interfaces · Data Visualization · AI-assisted Design**
+
+---
+
+## Design Engineering
+
+My frontend experience helps me design with implementation constraints in mind and collaborate closely with engineering.
+
+**Angular · React · HTML5 · CSS3 · Bootstrap · Component-Based Architecture · Design-to-Code · Design QA**
+
+---
+
+# HOW I WORK
+
+## 01 — Discover
+
+Understand the users, business goals, requirements, and constraints.
+
+**Research · Stakeholder Interviews · Competitive Analysis**
+
+↓
+
+## 02 — Define
+
+Turn research and requirements into clear problems and opportunities.
+
+**Journey Mapping · Information Architecture · Problem Definition**
+
+↓
+
+## 03 — Explore
+
+Explore multiple approaches before committing to a solution.
+
+**User Flows · Wireframes · Interaction Design · Design Explorations**
+
+↓
+
+## 04 — Design
+
+Translate the strongest direction into a scalable product experience.
+
+**UI Design · Prototyping · Design Systems · Responsive Design**
+
+↓
+
+## 05 — Validate
+
+Test assumptions and identify usability and accessibility issues.
+
+**Usability Testing · Accessibility Testing · Design Reviews**
+
+↓
+
+## 06 — Ship
+
+Work with engineering to ensure the final product matches the intended experience.
+
+**Design Handoff · Developer Collaboration · Design QA · Frontend**
+
+---
+
+# DESIGN SYSTEMS
+
+## Systems thinking, not just screens.
+
+Most interface work is visible in the final screen. The system behind it is often invisible.
+
+I focus on the foundations, tokens, patterns, components, documentation, and accessibility decisions that allow a product to scale beyond a single screen.
+
+### My approach
+
+**Foundation**
+
+Raw design values and primitives.
+
+↓
+
+**Semantic**
+
+Meaning and product intent.
+
+↓
+
+**Component**
+
+Reusable UI patterns and states.
+
+↓
+
+**Product**
+
+Real workflows and interfaces.
+
+### Areas I work across
+
+Color
+Typography
+Spacing
+Radius
+Elevation
+Grid
+Design Tokens
+Semantic Tokens
+Figma Variables
+Components
+Variants
+Responsive Patterns
+Accessibility
+Design QA
+Documentation
+
+---
+
+# DESIGN → CODE
+
+## From Figma to production
+
+I bring frontend development experience into my design process.
+
+Rather than treating handoff as the end of design, I work across:
+
+**Design**
+
+Figma · Components · Variables
+
+↓
+
+**System**
+
+Tokens · Patterns · States
+
+↓
+
+**Handoff**
+
+Specifications · Responsive behavior · Interaction details
+
+↓
+
+**Development**
+
+Angular · React · HTML · CSS · Bootstrap
+
+↓
+
+**QA**
+
+Visual consistency · Responsive behavior · Interaction · Accessibility
+
+This helps bridge the gap between design intent and implementation.
+
+---
+
+# ACCESSIBILITY
+
+## Accessibility by design
+
+Accessibility is part of the system, not a final checklist.
+
+I consider accessibility across:
+
+### Color
+
+Contrast validation for text, icons, buttons, badges, surfaces, and semantic states.
+
+### Components
+
+Accessible states across default, hover, focus, active, disabled, loading, error, and success.
+
+### Interaction
+
+Clear focus states, predictable interaction behavior, and keyboard-friendly patterns.
+
+### Responsive design
+
+Experiences that remain usable across desktop, tablet, and mobile.
+
+### Standards
+
+**WCAG 2.1 AA / AAA**
+
+---
+
+# SELECTED PROJECTS
+
+## Enterprise Products
+
+### B2B Freight Platform
+
+Logistics management and shipment booking workflows.
+
+**Product Design · Enterprise UX · Dashboard · Complex Workflow**
+
+### Tender Management — GAIL
+
+Workflow management experience for tender operations.
+
+**UX · UI · Enterprise Workflow**
+
+### Employee Management
+
+Internal dashboard supporting employee operations.
+
+**Dashboard · Enterprise UX**
+
+### Laborers Management
+
+Workforce management experience for operational teams.
+
+**UX · Dashboard · Workflow**
+
+### Logistics Warehouse
+
+Warehouse operations dashboard focused on operational visibility.
+
+**Enterprise UX · Dashboard · Data**
+
+---
+
+## Government & Public Sector
+
+### Bhavini
+
+Government platform UI design and development.
+
+**UI/UX · Responsive Design · Development**
+
+### Milan — Indian Navy
+
+Public-facing event experience.
+
+**UI Development · Responsive Design**
+
+### GAIL
+
+Content-heavy and workflow-driven enterprise platform.
+
+**UX · Information Architecture · UI**
+
+---
+
+## SaaS & Web Products
+
+### UnifyCloud
+
+Enterprise SaaS product and website experience.
+
+**Product Design · Dashboard · UI Development**
+
+### Mytraveltown
+
+Travel platform experience.
+
+**UI/UX · Responsive Design**
+
+### BRNS
+
+Institutional digital experience.
+
+**UI/UX**
+
+### Runcon
+
+Web experience and interface design.
+
+**UI/UX**
+
+### Unitech
+
+Dashboard experience.
+
+**UI/UX · Dashboard**
+
+### HR Management
+
+HR operations dashboard.
+
+**Dashboard · Enterprise UX**
+
+### CallHub
+
+Product interface design.
+
+**UI/UX**
+
+---
+
+# LEGACY → MODERN
+
+## Improving existing enterprise products
+
+Not every product starts from a blank canvas.
+
+At UnifiedCloud, I reviewed and redesigned **5+ legacy enterprise dashboards**, focusing on:
+
+**Navigation · Information Hierarchy · Workflow Usability · Task Clarity**
+
+The goal was not simply to make the interfaces look newer.
+
+It was to understand:
+
+* Where users were getting lost.
+* Which information mattered most.
+* Which workflows could be simplified.
+* Which patterns could be standardized.
+* Where visual inconsistency was affecting usability.
+
+This work contributed to an **80% improvement in user retention** and a **15% reduction in support ticket volume**.
+
+---
+
+# IMPACT
+
+## 25%
+
+Improvement in project delivery time
+
+Through streamlined design workflows, reusable design-system patterns, and closer design-engineering collaboration.
+
+## 80%
+
+Improvement in user retention
+
+Through simplified workflows and improved information hierarchy across enterprise dashboards.
+
+## 15%
+
+Reduction in support ticket volume
+
+Through clearer workflows and improved task usability.
+
+---
+
+# EXPERIENCE
+
+## Infoneo Technologies Pvt Ltd
+
+### UI/UX Designer & UI Developer
+
+**Nov 2024 – Mar 2026**
+
+Designed AI-powered enterprise SaaS dashboards and worked across product, engineering, and backend teams to translate business requirements into user flows, wireframes, prototypes, and final interfaces.
+
+Built and scaled reusable design-system patterns that improved consistency, collaboration, and delivery efficiency.
+
+Developed responsive frontend components using Angular, HTML5, CSS3, and Bootstrap.
+
+Applied WCAG accessibility principles and collaborated with developers to resolve visual and interaction inconsistencies during implementation.
+
+---
+
+## UnifiedCloud Pvt Ltd
+
+### UI/UX Designer & UI Developer
+
+**Dec 2021 – Sep 2024**
+
+Reviewed and redesigned 5+ legacy enterprise dashboards, focusing on navigation, information hierarchy, workflow usability, and task clarity.
+
+Simplified key workflows and reorganized interfaces, contributing to an 80% improvement in user retention and a 15% reduction in support ticket volume.
+
+Worked within a 50+ member cross-functional team across product, engineering, and business, participating in design reviews, Agile/Scrum ceremonies, and development handoff.
+
+Supported frontend implementation using HTML5, CSS3, and Bootstrap.
+
+---
+
+# MY TOOLKIT
+
+### Design
+
+Figma · Adobe XD
+
+### UX & Research
+
+User Flows · Information Architecture · Journey Mapping · Competitive Analysis · Usability Testing · Stakeholder Interviews · User Interviews
+
+### Design Systems
+
+Figma Variables · Design Tokens · Semantic Tokens · Components · Variants · Auto Layout · Storybook · Design QA
+
+### Frontend
+
+Angular · React · HTML5 · CSS3 · Bootstrap · Responsive Web Development
+
+### AI
+
+ChatGPT · GitHub Copilot · Figma AI · AI Prompting · AI Product Design · AI Dashboards
+
+### Collaboration
+
+Agile/Scrum · Design Reviews · Developer Handoff · Cross-functional Collaboration · Git
+
+---
+
+# ABOUT
+
+## Designing beyond the screen
+
+I'm a Product/UI/UX Designer with 4+ years of experience designing enterprise SaaS products, AI-powered dashboards, complex web applications, government platforms, and scalable design systems.
+
+I enjoy working on products where the problem is more complicated than the interface initially suggests—where information architecture, workflows, business requirements, accessibility, system consistency, and engineering constraints all need to work together.
+
+My design approach combines product thinking with systems thinking.
+
+I start by understanding the problem and the people using the product, explore different ways to solve it, and then build the interface and system needed to make the experience clear and scalable.
+
+My frontend development experience in Angular, React, HTML, CSS, and Bootstrap also helps me understand implementation constraints and collaborate closely with engineers.
+
+### What I care about
+
+**Clarity over decoration**
+Interfaces should help users understand what matters and what to do next.
+
+**Systems over one-off solutions**
+Good patterns should solve more than one screen.
+
+**Accessibility from the beginning**
+Accessible experiences should be built into the foundation.
+
+**Design that can ship**
+The best design is one that survives contact with engineering, constraints, and real users.
+
+---
+
+# CURRENTLY INTERESTED IN
+
+**Product Design · Enterprise SaaS · AI Products · Design Systems · Complex Workflows · Accessibility · UX Research · Design Engineering**
+
+---
+
+# LET'S TALK
+
+## Have a complex product problem?
+
+I'm open to **Product Designer, UI/UX Designer, and UX Researcher** opportunities where I can work on complex products, scalable systems, AI experiences, and meaningful user problems.
+
+**Email:** [mayank58.singh@gmail.com](mailto:mayank58.singh@gmail.com)
+**LinkedIn:** linkedin.com/in/mayankraj
+
+**[Download Resume] [Get in Touch]**
+
+---
+
+© 2026 Mayank Raj. All rights reserved.
