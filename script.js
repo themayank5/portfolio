@@ -326,7 +326,61 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
 
-  
+  /* =========================================
+   CUSTOM CURSOR
+========================================= */
+
+const cursorOuter = document.getElementById("cursor-outer");
+const cursorDot = document.getElementById("cursor-dot");
+
+let mouseX = window.innerWidth / 2;
+let mouseY = window.innerHeight / 2;
+
+let outerX = mouseX;
+let outerY = mouseY;
+
+
+/* Mouse Position */
+
+document.addEventListener("mousemove", (e) => {
+
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+
+  document.body.classList.remove("cursor-hidden");
+
+});
+
+
+/* Smooth Cursor Animation */
+
+function animateCursor() {
+
+  outerX += (mouseX - outerX) * 0.12;
+  outerY += (mouseY - outerY) * 0.12;
+
+  cursorOuter.style.left = outerX + "px";
+  cursorOuter.style.top = outerY + "px";
+
+  cursorDot.style.left = mouseX + "px";
+  cursorDot.style.top = mouseY + "px";
+
+  requestAnimationFrame(animateCursor);
+}
+
+animateCursor();
+
+
+/* Mouse Leaves Window */
+
+document.addEventListener("mouseleave", () => {
+  document.body.classList.add("cursor-hidden");
+});
+
+
+document.addEventListener("mouseenter", () => {
+  document.body.classList.remove("cursor-hidden");
+});
 
 });
 

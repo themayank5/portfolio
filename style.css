@@ -116,7 +116,7 @@ img {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #5b5b5c;
+  color: #005eff;
   margin-bottom: 12px;
 }
 
@@ -136,7 +136,7 @@ img {
 }
 
 .headline-sub {
-  font-size: clamp(1.02rem, 1.6vw, 1.2rem);
+  font-size: clamp(1.02rem, 1.6vw, 1rem);
   font-weight: 400;
   color: var(--text-secondary);
   line-height: 1.25;
@@ -224,6 +224,11 @@ img {
   transition: all var(--duration) var(--ease);
 }
 
+.btn-ter-1{
+      border: 1px solid #9E9E9E !important;
+    background: white !important;
+    color: black !important;
+}
 .btn-editorial-primary:hover {
   background: #1e293b;
   color: #ffffff;
@@ -231,36 +236,170 @@ img {
 }
 
 .btn-editorial-secondary {
+  position: relative;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 10px 22px;
+
+  padding: 10px 16px;
+
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--text-primary);
-  background: transparent;
+
+  color: #ffffff;
+
+  /* Animated background */
+  background: linear-gradient(
+    110deg,
+    #000000 0%,
+    #000000 35%,
+    #252525 50%,
+    #000000 65%,
+    #000000 100%
+  );
+
+  background-size: 250% 100%;
+  background-position: 100% 0;
+
   border: 1px solid var(--border-strong);
-  border-radius: var(--r-pill);
+  border-radius: 6px;
+
   cursor: pointer;
-  transition: all var(--duration) var(--ease);
+  overflow: hidden;
+
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease,
+    box-shadow 0.4s ease,
+    background-position 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+
+/* --------------------------------
+   Animated light layer
+-------------------------------- */
+
+.btn-editorial-secondary::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    110deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.04) 40%,
+    rgba(255, 255, 255, 0.18) 50%,
+    rgba(255, 255, 255, 0.04) 60%,
+    transparent 80%
+  );
+
+  transform: translateX(-120%);
+
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+
+  pointer-events: none;
+}
+
+
+/* --------------------------------
+   Hover
+-------------------------------- */
+
 .btn-editorial-secondary:hover {
-  background: black;
+
+  
+
   border-color: var(--border-active);
-  color: var(--text-dim);
+
+  background-position: 0% 0;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.18),
+    0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Light sweep */
+
+.btn-editorial-secondary:hover::before {
+  transform: translateX(120%);
+}
+
+
+/* --------------------------------
+   Button content stays above effect
+-------------------------------- */
+
+.btn-editorial-secondary > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* --------------------------------
+   Arrow animation
+-------------------------------- */
+
+.btn-editorial-secondary i {
+  position: relative;
+  display: inline-block;
+
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+
+
+/* --------------------------------
+   Click
+-------------------------------- */
+
+.btn-editorial-secondary:active {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.14);
+}
+
+
+/* --------------------------------
+   Focus
+-------------------------------- */
+
+.btn-editorial-secondary:focus-visible {
+  outline: 2px solid var(--border-active);
+  outline-offset: 3px;
+}
+
+
+/* --------------------------------
+   Reduced motion
+-------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .btn-editorial-secondary,
+  .btn-editorial-secondary::before,
+  .btn-editorial-secondary i {
+    transition: none;
+  }
+
 }
 
 /* ── 05. TOP NAVIGATION ── */
 #mainNav {
-  position: sticky;
+  position: sticky !important;
   top: 0;
   z-index: 1000;
   background: rgba(248, 249, 251, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
-  padding: 8px 0;
+  padding: 16px 0;
 }
 
 .nav-monogram {
@@ -279,8 +418,8 @@ img {
 }
 
 .nav-name {
-  font-size: 2.5rem;
-  font-weight: 700;
+     font-size: 1.5rem;
+    font-weight: 500;
   letter-spacing: -0.01em;
   color: var(--text-primary);
 }
@@ -301,6 +440,7 @@ img {
   padding: 6px 14px;
   border-radius: var(--r-pill);
   transition: all var(--duration) var(--ease);
+  border: 1px solid transparent;
 }
 
 .nav-link-ed:hover,
@@ -326,18 +466,19 @@ img {
 }
 
 .hero-title-ed {
-  font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 5.5vw, 4.4rem);
-  font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -0.025em;
-  color: var(--text-primary);
-
-  margin-bottom: 16px;
+    font-family: var(--font-serif);
+    font-size: clamp(2.4rem, 5.5vw, 6rem);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+    margin-bottom: 16px;
 }
-
+.Case-img-height{
+  height: 365px
+}
 .hero-bio-ed {
-  font-size: clamp(1.05rem, 1.8vw, 1.22rem);
+  font-size: clamp(1.05rem, 1.8vw, 1rem);
   color: var(--text-secondary);
   line-height: 1.5;
       margin-bottom: 14px;
@@ -540,22 +681,150 @@ img {
 }
 
 .work-action-link {
+  position: relative;
+
   display: inline-flex;
   align-items: center;
   gap: 6px;
+
+  width: fit-content;
+
   font-size: 0.85rem;
   font-weight: 600;
+
   color: #ffffff;
-  border-bottom: 1px solid var(--border-strong);
-  background: black;
-      padding: 10px 16px;
-    border-radius: 6px;
-  transition: all var(--duration) var(--ease);
+  background: #000000;
+
+  padding: 6px 16px;
+
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+
+  overflow: hidden;
+
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
 }
 
+
+/* =========================================
+   Animated highlight
+========================================= */
+
+.work-action-link::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -120%;
+
+  width: 80%;
+  height: 100%;
+
+  background: linear-gradient(
+    110deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  transition:
+    left 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   Keep content above animation
+========================================= */
+
+.work-action-link > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================
+   Hover
+========================================= */
+
 .work-action-link:hover {
-  border-bottom-color: #111827;
-  gap: 10px;
+
+  background: #151515;
+
+  border-color: var(--border-active);
+
+  
+
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Move highlight across button */
+
+.work-action-link:hover::before {
+  left: 140%;
+}
+
+
+/* =========================================
+   Arrow / Icon
+========================================= */
+
+.work-action-link i {
+  display: inline-block;
+
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+
+
+/* =========================================
+   Active
+========================================= */
+
+.work-action-link:active {
+  transform: translateY(0);
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   Focus accessibility
+========================================= */
+
+.work-action-link:focus-visible {
+  outline: 2px solid var(--border-active);
+  outline-offset: 3px;
+}
+
+
+/* =========================================
+   Reduced motion
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .work-action-link,
+  .work-action-link::before,
+  .work-action-link i {
+    transition: none;
+  }
+
 }
 
 .work-action-link2 {
@@ -898,7 +1167,7 @@ img {
 
 /* ── 14. FOOTER ── */
 footer {
-  padding: 28px 0;
+  padding: 16px 0;
   border-top: 1px solid var(--border);
   background: var(--bg);
   font-size: 0.78rem;
@@ -1612,6 +1881,134 @@ footer {
   transition: transform 0.25s ease;
 }
 
+
+/* =========================================
+   CUSTOM CURSOR
+========================================= */
+
+#cursor-outer,
+#cursor-dot {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+
+  top: 0;
+  left: 0;
+
+  transform: translate(-50%, -50%);
+  will-change: left, top, width, height;
+}
+
+
+/* Outer Ring */
+
+#cursor-outer {
+  width: 36px;
+  height: 36px;
+
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+
+  opacity: 0.9;
+
+  transition:
+    width 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    height 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.25s ease,
+    background-color 0.35s ease,
+    opacity 0.3s ease;
+}
+
+
+/* Center Dot */
+
+#cursor-dot {
+  width: 5px;
+  height: 5px;
+
+  background: var(--accent);
+  border-radius: 50%;
+
+  transition:
+    width 0.2s ease,
+    height 0.2s ease,
+    background-color 0.2s ease;
+}
+
+
+/* Hover Links / Buttons */
+
+body:has(a:hover) #cursor-outer,
+body:has(button:hover) #cursor-outer {
+  width: 58px;
+  height: 58px;
+
+  border-color: rgba(95, 69, 255, 0.5);
+  background: rgba(95, 69, 255, 0.04);
+
+  opacity: 1;
+}
+
+
+/* Hover Project Action */
+
+body:has(.work-action-link:hover) #cursor-outer {
+  width: 62px;
+  height: 62px;
+
+  border-color: var(--accent);
+  background: rgba(95, 69, 255, 0.06);
+}
+
+
+/* Hover Main Button */
+
+body:has(.btn-editorial-secondary:hover) #cursor-outer {
+  width: 68px;
+  height: 68px;
+
+  border-color: var(--accent);
+  background: rgba(95, 69, 255, 0.08);
+}
+
+
+/* Hide when mouse leaves */
+
+body.cursor-hidden #cursor-outer,
+body.cursor-hidden #cursor-dot {
+  opacity: 0;
+}
+
+
+/* Hide on touch devices */
+
+@media (hover: none), (pointer: coarse) {
+
+  #cursor-outer,
+  #cursor-dot {
+    display: none;
+  }
+
+}
+
+
+/* Hide browser cursor */
+
+@media (hover: hover) and (pointer: fine) {
+
+  body {
+    cursor: none;
+  }
+
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    cursor: none;
+  }
+
+}
 
 /* =========================================
    OPTIONAL: SMOOTH REVEAL
