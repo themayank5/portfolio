@@ -340,6 +340,7 @@ img {
   font-size: clamp(1.05rem, 1.8vw, 1.22rem);
   color: var(--text-secondary);
   line-height: 1.5;
+      margin-bottom: 14px;
 
   margin-bottom: 24px;
 }
@@ -348,7 +349,7 @@ img {
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 28px;
+  margin-top: 16px;
   padding-top: 18px;
   border-top: 1px solid var(--border);
   font-family: var(--font-mono);
@@ -363,12 +364,12 @@ img {
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  
+      margin-bottom: 8px;
   font-family: var(--font-mono);
   font-size: 1rem;
   color: #005eff;
   letter-spacing: 0.05em;
-      font-size: 14px;
+      font-size: 13px;
     font-weight: bold;
 }
 .hero-marquee-strip span {
@@ -376,6 +377,13 @@ img {
 }
 .hero-marquee-strip h5 {
   color: #000000;
+  font-size: 13px;
+  font-weight: 600;
+}
+.EXPERTISE{
+      font-size: 20px;
+    margin-bottom: 12px !important;
+        font-weight: 900;
 }
 
 /* ── 07. BIG WORDS NEED BACKUP (METRICS) ── */
@@ -540,8 +548,8 @@ img {
   color: #ffffff;
   border-bottom: 1px solid var(--border-strong);
   background: black;
-  padding: 10px 22px;
-  border-radius: 5px;
+      padding: 10px 16px;
+    border-radius: 6px;
   transition: all var(--duration) var(--ease);
 }
 
@@ -1537,6 +1545,81 @@ footer {
   font-size: 0.82rem;
 }
 
+
+/* =========================================
+   ADDITIONAL PROJECTS
+========================================= */
+
+.additional-project-items {
+  display: none;
+}
+
+/* Show additional projects */
+.additional-project-items.show {
+  display: flex;
+}
+
+
+/* =========================================
+   VIEW MORE BUTTON
+========================================= */
+
+.work-more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: #101827;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+      font-size: 0.85rem;
+    font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+}
+
+
+/* Hover */
+
+.work-more-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Active */
+
+.work-more-btn:active {
+  transform: translateY(0);
+}
+
+
+/* Keyboard accessibility */
+
+.work-more-btn:focus-visible {
+  outline: 3px solid rgba(0, 83, 219, 0.35);
+  outline-offset: 3px;
+}
+
+
+/* Icon */
+
+.work-more-btn .toggle-icon {
+  font-size: 14px;
+  transition: transform 0.25s ease;
+}
+
+
+/* =========================================
+   OPTIONAL: SMOOTH REVEAL
+========================================= */
+
+.additional-project-items {
+  overflow: hidden;
+}
 /* ── 18. RESPONSIVE BREAKPOINTS ── */
 
 /* ── Tablet (≤ 1024px) ── */
