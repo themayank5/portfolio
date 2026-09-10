@@ -168,13 +168,13 @@
                     "Design Once -&gt; Define the Rule -&gt; Scale With Confidence."
                   </div>
 
-                  <p class="work-summary-body mb-2">
+                  <p class="work-summary-body mb-2 d-none d-md-block">
                     Built a scalable 3-layer design system which is Foundation &rarr; Semantic &rarr;
                     Component&mdash;reframing screen
                     design from &ldquo;how this screen looks&rdquo; to &ldquo;what rules future screens must
                     follow.&rdquo;
                   </p>
-                  <p class="work-summary-body">A design system is not just a collection of components, it is a system of decisions that creates consistency.</p>
+                  <p class="work-summary-body d-none d-md-block">A design system is not just a collection of components, it is a system of decisions that creates consistency.</p>
 
                   <div class="work-impact-banner">
                     <strong>Impact:</strong><br />
@@ -212,7 +212,7 @@
                     "Making complex AI tools feel immediate, predictable, and trustworthy for non-technical users."
                   </div>
 
-                  <p class="work-summary-body">
+                  <p class="work-summary-body d-none d-md-block">
                     Designed an AI-powered SaaS platform making property transformation approachable for non-technical
                     users
                     through a unified upload &rarr; configure &rarr; generate &rarr; compare workflow across 5
@@ -257,7 +257,7 @@
                     "Resolving accumulated UX debt through systematic tokens and verified contrast rules."
                   </div>
 
-                  <p class="work-summary-body">
+                  <p class="work-summary-body d-none d-md-block">
                     Audited and systematically restructured accumulated UX debt in an enterprise AI dashboard &mdash;
                     creating 48
                     color tokens, 79 context-scoped typography styles, and validating contrast ratios to strict WCAG
@@ -680,7 +680,7 @@
               design tokens in Figma Variables to production CSS custom properties, every pattern serves dozens of
               future use cases.
             </p>
-            <div class="systems-tags">
+            <div class="systems-tags d-none d-md-block">
               <span class="editorial-tag emerald">Visual Design</span>
               <span class="editorial-tag emerald">Interaction Design</span>
               <span class="editorial-tag emerald">Design Tokens</span>
@@ -702,7 +702,7 @@
               think through layout behavior, component states, content hierarchy, and implementation constraints early,
               making design-to-development a continuous conversation rather than a handoff.
             </p>
-            <div class="systems-tags">
+            <div class="systems-tags d-none d-md-block">
               <span class="editorial-tag emerald">Angular UI</span>
               <span class="editorial-tag emerald">React UI</span>
               <span class="editorial-tag emerald">HTML5</span>
@@ -725,7 +725,7 @@
               there. I simplify dense interfaces, rebuild information hierarchy, and streamline workflows while
               respecting the patterns users already know, so improvements land without retraining anyone.
             </p>
-            <div class="systems-tags">
+            <div class="systems-tags d-none d-md-block">
               <span class="editorial-tag emerald">Information Architecture</span>
               <span class="editorial-tag emerald">Workflow Simplification</span>
               <span class="editorial-tag emerald">Legacy Modernization</span>
@@ -745,7 +745,7 @@
               shape my decisions on color, typography, interaction states, and focus behavior from the start, so the
               result stays usable across different needs and devices by default
             </p>
-            <div class="systems-tags">
+            <div class="systems-tags d-none d-md-block">
               <span class="editorial-tag emerald">WCAG 2.1 AA/AAA</span>
               <span class="editorial-tag emerald">Contrast Auditing</span>
               <span class="editorial-tag emerald">Accessible States</span>
@@ -791,7 +791,7 @@
             
           </div>
 
-          <div class="values-column">
+          <div class="values-column d-none d-md-block">
             <div class="value-box-ed">
               <h3 class="value-title-ed">Clarity over decoration</h3>
               <p class="value-desc-ed mb-0">Every element should have a purpose. I focus on clear hierarchy, meaningful
@@ -912,6 +912,7 @@
 
     });
   </script>
+  
   <script>
   async function trackPortfolioVisit() {
 
@@ -920,21 +921,56 @@
 
     if (!counterElement) return;
 
+    /*
+     * Do NOT count local development/testing.
+     */
+    const hostname =
+      window.location.hostname;
+
+    const isLocal =
+      hostname === "localhost" ||
+      hostname === "127.0.0.1" ||
+      hostname === "::1";
+
+    if (isLocal) {
+      counterElement.textContent = "—";
+      return;
+    }
+
     // Cloudflare Worker URL
     const API_URL =
       "https://mayank-portfolio-counter.mayank566-singh.workers.dev";
 
-    const SESSION_KEY =
-      "portfolio_visit_counted";
+    const VISITOR_KEY =
+      "portfolio_visitor_id";
 
     try {
 
-      const alreadyCounted =
-        sessionStorage.getItem(SESSION_KEY);
+      /*
+       * Check whether this browser has already
+       * been counted as a visitor.
+       */
+      let visitorId =
+        localStorage.getItem(VISITOR_KEY);
 
-      if (!alreadyCounted) {
+      if (!visitorId) {
 
-        // Count this visit through Cloudflare Worker
+        /*
+         * Create a permanent visitor ID
+         * for this browser profile.
+         */
+        visitorId =
+          crypto.randomUUID();
+
+        localStorage.setItem(
+          VISITOR_KEY,
+          visitorId
+        );
+
+        /*
+         * Count the visitor through
+         * Cloudflare Worker.
+         */
         const response =
           await fetch(`${API_URL}/up`);
 
@@ -944,50 +980,34 @@
           );
         }
 
-        const result =
-          await response.json();
+      }
 
-        const count =
-          result?.data?.up_count;
-
-        if (typeof count === "number") {
-          counterElement.textContent =
-            count.toLocaleString("en-IN");
-        }
-
-        // Prevent counting refreshes in this browser session
-        sessionStorage.setItem(
-          SESSION_KEY,
-          "true"
+      /*
+       * Always retrieve the latest count.
+       */
+      const response =
+        await fetch(
+          `${API_URL}/?t=${Date.now()}`,
+          {
+            cache: "no-store"
+          }
         );
 
-      } else {
+      if (!response.ok) {
+        throw new Error(
+          `Counter retrieval failed: ${response.status}`
+        );
+      }
 
-        // Retrieve current count without incrementing
-        const response =
-          await fetch(
-            `${API_URL}/?t=${Date.now()}`,
-            {
-              cache: "no-store"
-            }
-          );
+      const result =
+        await response.json();
 
-        if (!response.ok) {
-          throw new Error(
-            `Counter retrieval failed: ${response.status}`
-          );
-        }
+      const count =
+        result?.data?.up_count;
 
-        const result =
-          await response.json();
-
-        const count =
-          result?.data?.up_count;
-
-        if (typeof count === "number") {
-          counterElement.textContent =
-            count.toLocaleString("en-IN");
-        }
+      if (typeof count === "number") {
+        counterElement.textContent =
+          count.toLocaleString("en-IN");
       }
 
     } catch (error) {
