@@ -48,7 +48,52 @@
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --duration: 200ms;
 }
+/* ================================
+   Visitor Counter
+================================ */
 
+.visitor-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.visitor-counter-icon {
+  width: 28px;
+  height: 28px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+
+  color: #03569f;
+  font-size: 13px;
+
+  flex-shrink: 0;
+}
+
+.visitor-counter-content {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+
+  line-height: 1;
+}
+
+.visitor-counter-content #visitor-count {
+  font-size: 14px;
+  font-weight: 600;
+  color: #212125;
+}
+
+.visitor-counter-content span:last-child {
+  font-size: 12px;
+  font-weight: 400;
+  color: #8a8a8f;
+}
 /* ── 02. RESET & BASE ── */
 *,
 *::before,
@@ -1171,6 +1216,7 @@ footer {
   flex-wrap: wrap;
   gap: 12px;
       font-size: 16px;
+      justify-content: space-between;
 }
 
 /* ── 15. TOAST & MODAL ── */
@@ -2921,3 +2967,8 @@ line-height: 1.5;
     overflow-y: auto;
   }
 }
+
+
+
+
+

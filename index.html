@@ -846,14 +846,26 @@
 
   <!-- ─────────── 10. FOOTER ─────────── -->
   <footer>
-    <div class="container">
-      <div class="footer-flex">
-        <div>
-          <p class="mb-0">&copy; 2026 Mayank Raj</p>
+  <div class="container">
+    <div class="footer-flex">
+
+      <div>
+        <p class="mb-0">&copy; 2026 Mayank Raj</p>
+      </div>
+
+      <div
+        class="visitor-counter"
+        aria-label="Portfolio visitor count"
+      >
+        <div class="visitor-counter-content">
+          <span id="visitor-count">—</span>
+         
         </div>
       </div>
+
     </div>
-  </footer>
+  </div>
+</footer>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -900,6 +912,97 @@
 
     });
   </script>
+  <script>
+  async function trackPortfolioVisit() {
+
+    const counterElement =
+      document.getElementById("visitor-count");
+
+    if (!counterElement) return;
+
+    // Cloudflare Worker URL
+    const API_URL =
+      "https://mayank-portfolio-counter.mayank566-singh.workers.dev";
+
+    const SESSION_KEY =
+      "portfolio_visit_counted";
+
+    try {
+
+      const alreadyCounted =
+        sessionStorage.getItem(SESSION_KEY);
+
+      if (!alreadyCounted) {
+
+        // Count this visit through Cloudflare Worker
+        const response =
+          await fetch(`${API_URL}/up`);
+
+        if (!response.ok) {
+          throw new Error(
+            `Counter increment failed: ${response.status}`
+          );
+        }
+
+        const result =
+          await response.json();
+
+        const count =
+          result?.data?.up_count;
+
+        if (typeof count === "number") {
+          counterElement.textContent =
+            count.toLocaleString("en-IN");
+        }
+
+        // Prevent counting refreshes in this browser session
+        sessionStorage.setItem(
+          SESSION_KEY,
+          "true"
+        );
+
+      } else {
+
+        // Retrieve current count without incrementing
+        const response =
+          await fetch(
+            `${API_URL}/?t=${Date.now()}`,
+            {
+              cache: "no-store"
+            }
+          );
+
+        if (!response.ok) {
+          throw new Error(
+            `Counter retrieval failed: ${response.status}`
+          );
+        }
+
+        const result =
+          await response.json();
+
+        const count =
+          result?.data?.up_count;
+
+        if (typeof count === "number") {
+          counterElement.textContent =
+            count.toLocaleString("en-IN");
+        }
+      }
+
+    } catch (error) {
+
+      console.error(
+        "Visitor counter error:",
+        error
+      );
+
+      counterElement.textContent = "—";
+    }
+  }
+
+  trackPortfolioVisit();
+</script>
 </body>
 
 </html>
