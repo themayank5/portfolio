@@ -216,6 +216,7 @@ img {
   background: rgba(0, 0, 0, 0.04);
   border: 1px solid var(--border);
   color: var(--text-secondary);
+      margin-bottom: 6px !important;
 }
 
 .editorial-tag.highlight {
@@ -1488,6 +1489,7 @@ footer {
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--text-primary);
+      line-height: 1.3;
 }
 
 .cs-layer-items {
@@ -1652,7 +1654,7 @@ footer {
 }
 
 .cs-principle-title {
-  font-family: var(--font-serif);
+  
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--text-primary);
@@ -2445,8 +2447,70 @@ p{
 
   color: #374151;
 }
-@media (max-width: 767px) {
 
+@media (max-width: 992px) {
+  .cs-principle-desc{
+    font-size: 18px;
+            line-height: 1.5;
+  }
+  .cs-principle-title{
+    font-size: 24px;
+  }
+  .cs-step{
+    margin-bottom: 0px;
+  }
+  .cs-step-desc{
+    font-size: 18px;
+            line-height: 1.5;
+  }
+  .cs-step-title{
+    font-size: 24px;
+            
+  }
+  .cs-list-item{
+    font-size: 20px;
+            line-height: 1.5;
+  }
+  .cs-section-body p{
+    font-size: 20px;
+            line-height: 1.5;
+  }
+   .cs-section-title{
+    font-size: 3rem ;
+  }
+  .about-narrative p{
+    font-size: 20px;
+            line-height: 1.5;
+  }
+  .systems-card-desc{
+    font-size: 20px;
+            line-height: 1.5;
+  }
+  .work-summary-body{
+        font-size: 20px;
+            line-height: 1.5;
+  }
+  .value-box-ed{
+    margin-bottom: 16px;
+  }
+  .editorial-tag{
+    margin-bottom: 12px;
+    margin-right: 12px;
+  }
+  .Case-img-height {
+    height: 560px;
+}
+  .headline-editorial {
+    font-size: 3rem !important;
+  }
+  .hero-bio-ed {
+    font-size: 20px !important;
+  }
+}
+@media (max-width: 767px) {
+.headline-editorial{
+  font-size: 3rem !important;
+}
   .cs-hero {
     min-height: auto;
     
@@ -2491,7 +2555,15 @@ p{
 ========================================= */
 
 @media (max-width: 768px) {
-
+  .Case-img-height {
+    height: 560px;
+}
+  .hero-bio-ed {
+    font-size: 20px !important;
+  }
+.headline-editorial{
+  font-size: 3rem !important;
+}
   .contact-block {
     padding: 80px 20px;
   }
@@ -2535,6 +2607,39 @@ p{
 ========================================= */
 
 @media (max-width: 480px) {
+  .cs-list-item{
+    font-size: 16px;
+            line-height: 1.5;
+  }
+  .cs-section-body p{
+    font-size: 16px;
+            line-height: 1.5;
+  }
+  .about-narrative p{
+    font-size: 16px !important;
+            line-height: 1.5;
+  }
+  .systems-card-desc{
+    font-size: 16px;
+            line-height: 1.5;
+  }
+  .work-summary-body{
+        font-size: 16px;
+            line-height: 1.5;
+  }
+      .Case-img-height {
+        height: 300px;
+    }
+
+  .hero-bio-ed {
+    font-size: 16px !important;
+  }
+  .headline-editorial{
+  font-size: 3rem !important;
+}
+  .headline-editorial{
+  font-size: 2.2rem !important;
+}
   .work-impact-banner{
     display: none;
   }
@@ -2799,10 +2904,7 @@ line-height: 1.5;
     grid-template-columns: 1fr;
   }
 
-  /* Systems */
-  .systems-card-title {
-    font-size: 1.35rem;
-  }
+ 
 
   /* Work title */
   .work-title-serif {
@@ -2847,6 +2949,9 @@ line-height: 1.5;
 
 /* ── Mobile Small (≤ 480px) ── */
 @media (max-width: 480px) {
+  .cs-section-title{
+    font-size: 2.2rem ;
+  }
   /* Nav name */
   .nav-name {
     font-size: clamp(0.95rem, 5vw, 1.3rem);
@@ -2915,10 +3020,7 @@ line-height: 1.5;
     padding: 14px 16px;
   }
 
-  /* CS principle title */
-  .cs-principle-title {
-    font-size: 1.2rem;
-  }
+  
 
   /* CS nav next */
   .cs-nav-dir {
