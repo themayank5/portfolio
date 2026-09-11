@@ -48,6 +48,15 @@
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --duration: 200ms;
 }
+.btn-a1{
+     width: fit-content !important;
+    background: #03569f00 !important;
+    color: #03569F !important;
+}
+.btn-a2{
+     width: fit-content !important;
+     margin-right: 10px;
+}
 /* ================================
    Visitor Counter
 ================================ */
@@ -1149,6 +1158,7 @@ img {
   border: 1px solid var(--border);
   border-radius: var(--r-md);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      margin-bottom: 16px;
 }
 
 .value-title-ed {
@@ -2949,6 +2959,14 @@ line-height: 1.5;
 
 /* ── Mobile Small (≤ 480px) ── */
 @media (max-width: 480px) {
+  .btn-a1{
+     width: 100% !important;
+     justify-content: center;
+}
+.btn-a2{
+     width: 100% !important;
+     justify-content: center;
+}
   .cs-section-title{
     font-size: 2.2rem ;
   }
