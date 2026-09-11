@@ -55,7 +55,8 @@
 }
 .btn-a2{
      width: fit-content !important;
-     margin-right: 10px;
+     margin-right: 10px; 
+     margin-bottom: 10px;
 }
 /* ================================
    Visitor Counter
