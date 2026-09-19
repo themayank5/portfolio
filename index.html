@@ -1101,6 +1101,125 @@
 
   trackPortfolioVisit();
 </script>
+<!-- Portfolio Analytics Events -->
+<script>
+  document.addEventListener("click", function (event) {
+
+    const element = event.target.closest("a, button");
+
+    if (!element || typeof gtag !== "function") return;
+
+    const text = element.textContent.trim().replace(/\s+/g, " ");
+    const href = element.getAttribute("href") || "";
+
+    /*
+     * Find project name when the clicked element
+     * belongs to a project card.
+     */
+    const projectCard =
+      element.closest(".work-entry, .work-entry2");
+
+    const projectTitle =
+      projectCard?.querySelector("h3")?.textContent
+        ?.trim()
+        ?.replace(/\s+/g, " ") || "";
+
+    /*
+     * Resume
+     */
+    if (
+      href.toLowerCase().includes("resume") ||
+      text.toLowerCase().includes("view resume")
+    ) {
+      gtag("event", "resume_click", {
+        link_text: text,
+        destination: href
+      });
+
+      return;
+    }
+
+    /*
+     * LinkedIn
+     */
+    if (href.toLowerCase().includes("linkedin.com")) {
+      gtag("event", "linkedin_click", {
+        link_text: text,
+        destination: href
+      });
+
+      return;
+    }
+
+    /*
+     * Email copy
+     */
+    if (element.hasAttribute("data-copy-email")) {
+      gtag("event", "email_copy", {
+        action: "copy_email"
+      });
+
+      return;
+    }
+
+    /*
+     * Phone copy
+     */
+    if (element.hasAttribute("data-copy-phone")) {
+      gtag("event", "phone_copy", {
+        action: "copy_phone"
+      });
+
+      return;
+    }
+
+    /*
+     * Figma prototype
+     */
+    if (href.toLowerCase().includes("figma.com")) {
+      gtag("event", "figma_click", {
+        project: projectTitle,
+        link_text: text,
+        destination: href
+      });
+
+      return;
+    }
+
+    /*
+     * Case study / design document
+     */
+    if (
+      href.toLowerCase().includes(".pdf") ||
+      text.toLowerCase().includes("case study") ||
+      text.toLowerCase().includes("design document")
+    ) {
+      gtag("event", "case_study_click", {
+        project: projectTitle,
+        link_text: text,
+        destination: href
+      });
+
+      return;
+    }
+
+    /*
+     * External project / live website
+     */
+    if (
+      text.toLowerCase().includes("see live website")
+    ) {
+      gtag("event", "external_project_click", {
+        project: projectTitle,
+        link_text: text,
+        destination: href
+      });
+
+      return;
+    }
+
+  });
+</script>
 </body>
 
 </html>
