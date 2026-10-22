@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
   copyButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const email = 'mayank58.singh@gmail.com';
+      const email = 'mayank61.singh@gmail.com';
       navigator.clipboard.writeText(email).then(() => {
-        showToast(`Copied ${email} to clipboard`);
+        showToast(`Email Copied ${email} to clipboard`);
       }).catch(() => {
         showToast(`Email: ${email}`);
       });
