@@ -53,9 +53,14 @@
         </nav>
 
         <div class="d-flex align-items-center gap-2">
-          <button class="btn-editorial-secondary d-none d-md-inline-flex btn-ter-1" data-copy-phone>
+          <button class="btn-editorial-secondary d-none d-md-inline-flex btn-ter-1" data-copy-phone data-phone="9311301883">
             <i class="bi bi-clipboard"></i>
-            <span class="nav-btn-text">Copy Phone : +91 9311301883</span>
+            <span class="nav-btn-text">Copy Phone : 9311301883</span>
+          </button>
+          
+          <button class="btn-editorial-secondary d-none d-md-inline-flex btn-ter-1" data-copy-phone data-phone="9015119802">
+            <i class="bi bi-clipboard"></i>
+            <span class="nav-btn-text">Copy Phone : 9015119802</span>
           </button>
           <a class="btn-editorial-secondary d-none d-sm-inline-flex" target="_blank"
             href="img//Mayank_Raj_UI_UX_Designer_Resume.pdf">
@@ -1131,9 +1136,15 @@
             <button class="btn-editorial-secondary btn-ter-1" data-copy-email>
               <i class="bi bi-clipboard"></i> Copy Email : mayank61.singh@gmail.com
             </button>
-            <button class="btn-editorial-secondary btn-ter-1" data-copy-phone>
-              <i class="bi bi-clipboard"></i> Copy Phone : +91 9311301883
-            </button>
+          <button class="btn-editorial-secondary d-none d-md-inline-flex btn-ter-1" data-copy-phone data-phone="9311301883">
+            <i class="bi bi-clipboard"></i>
+            <span class="nav-btn-text">Copy Phone : 9311301883</span>
+          </button>
+          
+          <button class="btn-editorial-secondary d-none d-md-inline-flex btn-ter-1" data-copy-phone data-phone="9015119802">
+            <i class="bi bi-clipboard"></i>
+            <span class="nav-btn-text">Copy Phone : 9015119802</span>
+          </button>
             <a class="btn-editorial-secondary btn-ter-1" target="_blank"
               href="img//Mayank_Raj_UI_UX_Designer_Resume.pdf">
               <i class="bi bi-file-earmark-person"></i> View Resume
@@ -1326,124 +1337,299 @@
     trackPortfolioVisit();
   </script>
   <!-- Portfolio Analytics Events -->
-  <script>
-    document.addEventListener("click", function (event) {
+  
+<!-- Portfolio Analytics Events -->
+<script>
+  // Handle all phone-copy buttons across the website
+  document.addEventListener("click", async function (event) {
+    const button = event.target.closest("[data-copy-phone]");
 
-      const element = event.target.closest("a, button");
+    if (!button) return;
 
-      if (!element || typeof gtag !== "function") return;
+    event.preventDefault();
 
-      const text = element.textContent.trim().replace(/\s+/g, " ");
-      const href = element.getAttribute("href") || "";
+    const phoneNumber = button.dataset.phone;
 
-      /*
-       * Find project name when the clicked element
-       * belongs to a project card.
-       */
-      const projectCard =
-        element.closest(".work-entry, .work-entry2");
+    if (!phoneNumber) {
+      console.error("Missing data-phone attribute:", button);
+      return;
+    }
 
-      const projectTitle =
-        projectCard?.querySelector("h3")?.textContent
-          ?.trim()
-          ?.replace(/\s+/g, " ") || "";
+    let copied = false;
 
-      /*
-       * Resume
-       */
-      if (
-        href.toLowerCase().includes("resume") ||
-        text.toLowerCase().includes("view resume")
-      ) {
-        gtag("event", "resume_click", {
-          link_text: text,
-          destination: href
-        });
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(phoneNumber);
+        copied = true;
+      } else {
+        const textarea = document.createElement("textarea");
+        textarea.value = phoneNumber;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.left = "-9999px";
 
-        return;
+        document.body.appendChild(textarea);
+        textarea.select();
+        copied = document.execCommand("copy");
+        textarea.remove();
+      }
+    } catch (error) {
+      console.error("Phone copy failed:", error);
+    }
+
+    if (!copied) {
+      console.error("Unable to copy phone number:", phoneNumber);
+      return;
+    }
+
+    console.log("Copied phone number:", phoneNumber);
+
+    if (typeof gtag === "function") {
+      gtag("event", "phone_copy", {
+        action: "copy_phone",
+        phone_number: phoneNumber
+      });
+    }
+
+    // Show your existing toast notification
+    const toast = document.getElementById("toast");
+
+    if (toast) {
+      const toastText = toast.querySelector(".toast-text");
+
+      if (toastText) {
+        toastText.textContent = "Phone number copied: " + phoneNumber;
       }
 
-      /*
-       * LinkedIn
-       */
-      if (href.toLowerCase().includes("linkedin.com")) {
-        gtag("event", "linkedin_click", {
-          link_text: text,
-          destination: href
-        });
+      toast.classList.add("show");
 
-        return;
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2000);
+    }
+  });
+
+  // Track other portfolio links and buttons
+  document.addEventListener("click", function (event) {
+    const element = event.target.closest("a, button");
+
+    if (!element || element.hasAttribute("data-copy-phone")) return;
+    if (typeof gtag !== "function") return;
+
+    const text = element.textContent.trim().replace(/\s+/g, " ");
+    const href = element.getAttribute("href") || "";
+
+    const projectCard = element.closest(".work-entry, .work-entry2");
+
+    const projectTitle =
+      projectCard?.querySelector("h3")?.textContent
+        ?.trim()
+        ?.replace(/\s+/g, " ") || "";
+
+    if (
+      href.toLowerCase().includes("resume") ||
+      text.toLowerCase().includes("view resume")
+    ) {
+      gtag("event", "resume_click", {
+        link_text: text,
+        destination: href
+      });
+      return;
+    }
+
+    if (href.toLowerCase().includes("linkedin.com")) {
+      gtag("event", "linkedin_click", {
+        link_text: text,
+        destination: href
+      });
+      return;
+    }
+
+    if (element.hasAttribute("data-copy-email")) {
+      gtag("event", "email_copy", {
+        action: "copy_email"
+      });
+      return;
+    }
+
+    if (href.toLowerCase().includes("figma.com")) {
+      gtag("event", "figma_click", {
+        project: projectTitle,
+        link_text: text,
+        destination: href
+      });
+      return;
+    }
+
+    if (
+      href.toLowerCase().includes(".pdf") ||
+      text.toLowerCase().includes("case study") ||
+      text.toLowerCase().includes("design document")
+    ) {
+      gtag("event", "case_study_click", {
+        project: projectTitle,
+        link_text: text,
+        destination: href
+      });
+      return;
+    }
+
+    if (text.toLowerCase().includes("see live website")) {
+      gtag("event", "external_project_click", {
+        project: projectTitle,
+        link_text: text,
+        destination: href
+      });
+    }
+  });
+</script>
+
+<!-- Portfolio Analytics Events -->
+<script>
+  // Handle all phone-copy buttons across the website
+  document.addEventListener("click", async function (event) {
+    const button = event.target.closest("[data-copy-phone]");
+
+    if (!button) return;
+
+    event.preventDefault();
+
+    const phoneNumber = button.dataset.phone;
+
+    if (!phoneNumber) {
+      console.error("Missing data-phone attribute:", button);
+      return;
+    }
+
+    let copied = false;
+
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(phoneNumber);
+        copied = true;
+      } else {
+        const textarea = document.createElement("textarea");
+        textarea.value = phoneNumber;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.left = "-9999px";
+
+        document.body.appendChild(textarea);
+        textarea.select();
+        copied = document.execCommand("copy");
+        textarea.remove();
+      }
+    } catch (error) {
+      console.error("Phone copy failed:", error);
+    }
+
+    if (!copied) {
+      console.error("Unable to copy phone number:", phoneNumber);
+      return;
+    }
+
+    console.log("Copied phone number:", phoneNumber);
+
+    if (typeof gtag === "function") {
+      gtag("event", "phone_copy", {
+        action: "copy_phone",
+        phone_number: phoneNumber
+      });
+    }
+
+    // Show your existing toast notification
+    const toast = document.getElementById("toast");
+
+    if (toast) {
+      const toastText = toast.querySelector(".toast-text");
+
+      if (toastText) {
+        toastText.textContent = "Phone number copied: " + phoneNumber;
       }
 
-      /*
-       * Email copy
-       */
-      if (element.hasAttribute("data-copy-email")) {
-        gtag("event", "email_copy", {
-          action: "copy_email"
-        });
+      toast.classList.add("show");
 
-        return;
-      }
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2000);
+    }
+  });
 
-      /*
-       * Phone copy
-       */
-      if (element.hasAttribute("data-copy-phone")) {
-        gtag("event", "phone_copy", {
-          action: "copy_phone"
-        });
+  // Track other portfolio links and buttons
+  document.addEventListener("click", function (event) {
+    const element = event.target.closest("a, button");
 
-        return;
-      }
+    if (!element || element.hasAttribute("data-copy-phone")) return;
+    if (typeof gtag !== "function") return;
 
-      /*
-       * Figma prototype
-       */
-      if (href.toLowerCase().includes("figma.com")) {
-        gtag("event", "figma_click", {
-          project: projectTitle,
-          link_text: text,
-          destination: href
-        });
+    const text = element.textContent.trim().replace(/\s+/g, " ");
+    const href = element.getAttribute("href") || "";
 
-        return;
-      }
+    const projectCard = element.closest(".work-entry, .work-entry2");
 
-      /*
-       * Case study / design document
-       */
-      if (
-        href.toLowerCase().includes(".pdf") ||
-        text.toLowerCase().includes("case study") ||
-        text.toLowerCase().includes("design document")
-      ) {
-        gtag("event", "case_study_click", {
-          project: projectTitle,
-          link_text: text,
-          destination: href
-        });
+    const projectTitle =
+      projectCard?.querySelector("h3")?.textContent
+        ?.trim()
+        ?.replace(/\s+/g, " ") || "";
 
-        return;
-      }
+    if (
+      href.toLowerCase().includes("resume") ||
+      text.toLowerCase().includes("view resume")
+    ) {
+      gtag("event", "resume_click", {
+        link_text: text,
+        destination: href
+      });
+      return;
+    }
 
-      /*
-       * External project / live website
-       */
-      if (
-        text.toLowerCase().includes("see live website")
-      ) {
-        gtag("event", "external_project_click", {
-          project: projectTitle,
-          link_text: text,
-          destination: href
-        });
+    if (href.toLowerCase().includes("linkedin.com")) {
+      gtag("event", "linkedin_click", {
+        link_text: text,
+        destination: href
+      });
+      return;
+    }
 
-        return;
-      }
+    if (element.hasAttribute("data-copy-email")) {
+      gtag("event", "email_copy", {
+        action: "copy_email"
+      });
+      return;
+    }
 
-    });
-  </script>
+    if (href.toLowerCase().includes("figma.com")) {
+      gtag("event", "figma_click", {
+        project: projectTitle,
+        link_text: text,
+        destination: href
+      });
+      return;
+    }
+
+    if (
+      href.toLowerCase().includes(".pdf") ||
+      text.toLowerCase().includes("case study") ||
+      text.toLowerCase().includes("design document")
+    ) {
+      gtag("event", "case_study_click", {
+        project: projectTitle,
+        link_text: text,
+        destination: href
+      });
+      return;
+    }
+
+    if (text.toLowerCase().includes("see live website")) {
+      gtag("event", "external_project_click", {
+        project: projectTitle,
+        link_text: text,
+        destination: href
+      });
+    }
+  });
+</script>
+
 </body>
 
 </html>
